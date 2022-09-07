@@ -3,7 +3,7 @@
 
 ## Quick Note
 The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS; you can install it with <br>
-```brew install emacs-plus --HEAD --no-title-bar``` The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs)
+```brew install emacs-plus --HEAD --no-titlebar``` The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs)
 
 ## Installation
 ### Install dependencies
