@@ -7,7 +7,8 @@ The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked
 
 ## Installation
 ### Install dependencies
-- To install all of the dependencies at one, run ```brew install sketchybar alacritty yabai skhd```
+- Install the dependencies that are avalible on homebrew, run ```brew install sketchybar alacritty yabai skhd```
+- Install oh-my-zsh (to get the zsh prompt) using the instructions [here](https://ohmyz.sh/#install) (just run the command there)
 
 ### (Not necessary) Install apps i used in the screenshot
 - Fetch program: neofetch ```brew install neofetch```
@@ -19,11 +20,16 @@ The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked
 Clone this repo with the following command. <br>
 ``` git clone https://github.com/itaysharir/Dotfiles.git```
 
+# Rename some files
+- Rename zsh/zshrc to .zshr (add a dot in the beginning of the filename)
+
 ### Move files
 - move sketchybar to ~/.config/sketchybar <br>
 - Move alacritty to ~/.config/alacritty <br>
 - Move yabai to ~/.config/yabai <br>
-- And finally, Move skhd to ~/.config/skhd <br>
+- Move skhd to ~/.config/skhd <br>
+- Move zsh/.zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
+- Move zsh/archcraft.zsh-theme to ~/.oh-my-zsh/custom/themes/archcraft.zsh-theme 
 
 ## That's it.
 Feel free to customize my dotfiles to your liking and to submit issues.
