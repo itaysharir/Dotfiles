@@ -20,7 +20,7 @@ The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked
 Clone this repo with the following command. <br>
 ``` git clone https://github.com/itaysharir/Dotfiles.git```
 
-# Rename some files
+## Rename some files
 - Rename zsh/zshrc to .zshrc (add a dot in the beginning of the filename)
 
 ### Move files
