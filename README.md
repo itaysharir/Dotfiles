@@ -21,7 +21,7 @@ Clone this repo with the following command. <br>
 ``` git clone https://github.com/itaysharir/Dotfiles.git```
 
 # Rename some files
-- Rename zsh/zshrc to .zshr (add a dot in the beginning of the filename)
+- Rename zsh/zshrc to .zshrc (add a dot in the beginning of the filename)
 
 ### Move files
 - move sketchybar to ~/.config/sketchybar <br>
@@ -33,3 +33,7 @@ Clone this repo with the following command. <br>
 
 ## That's it.
 Feel free to customize my dotfiles to your liking and to submit issues.
+
+## Credits
+Thanks for [distrotube on yt](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) for the bar design, i remade his bar from scratch
+Also thanks for [archcraft](https://archcraft.io/) developers for the alacritty config, i took it from there
