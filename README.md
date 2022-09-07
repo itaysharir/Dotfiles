@@ -17,7 +17,7 @@ The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked
 
 ### Clone this repository
 Clone this repo with the following command. <br>
-``` git clone ```
+``` git clone https://github.com/itaysharir/Dotfiles.git```
 
 ### Move files
 - move sketchybar to ~/.config/sketchybar <br>
