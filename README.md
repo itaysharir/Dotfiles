@@ -20,10 +20,10 @@ Clone this repo with the following command. <br>
 ``` git clone ```
 
 ### Move files
-- move config/sketchybar to ~/.config/sketchybar <br>
-- Move config/alacritty to ~/.config/alacritty <br>
-- Move config/yabai to ~/.config/yabai <br>
-- And finally, Move config/skhd to ~/.config/skhd <br>
+- move sketchybar to ~/.config/sketchybar <br>
+- Move alacritty to ~/.config/alacritty <br>
+- Move yabai to ~/.config/yabai <br>
+- And finally, Move skhd to ~/.config/skhd <br>
 
 ## That's it.
 Feel free to customize my dotfiles to your liking and to submit issues.
