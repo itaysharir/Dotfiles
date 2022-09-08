@@ -32,9 +32,9 @@ Clone this repo with the following command. <br>
 - Move zsh/archcraft.zsh-theme to ~/.oh-my-zsh/custom/themes/archcraft.zsh-theme 
 
 ## That's it.
-Feel free to customize my dotfiles to your liking and to submit issues. <br>
-Also, for the zsh prompt to work you need to add ```ZSH_THEME="archcraft"``` on your .zshrc, it's already there.
+- Feel free to customize my dotfiles to your liking and to submit issues. <br>
+- Also, for the zsh prompt to work you need to add ```ZSH_THEME="archcraft"``` on my .zshrc, it's already there.
 
 ## Credits
-Thanks for [distrotube on yt](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) for the bar design, i remade his bar from scratch. <br>
-Also thanks for [archcraft](https://archcraft.io/) developers for the alacritty config, i took it from there.
+- Thanks for [distrotube on yt](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) for the bar design, i remade his bar from scratch. <br>
+- Also thanks for [archcraft](https://archcraft.io/) developers for the alacritty config, i took it from there.
