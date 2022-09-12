@@ -1,9 +1,10 @@
 # Dotfiles
 ![Screen Shot 2022-09-12 at 22 06 09](https://user-images.githubusercontent.com/87126382/189735560-98678287-7f93-4ada-be43-5a15f7e26cee.jpg)
 
-## Quick Note
-The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS; you can install it with <br>
+## Quick Notes
+- The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS; you can install it with <br>
 ```brew install emacs-plus --HEAD --no-titlebar``` The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs)
+- The prompt i use is powerlevel10k with some default configuration options, [here is the github page to get it](https://github.com/romkatv/powerlevel10k). 
 
 ## Installation
 ### Install dependencies
