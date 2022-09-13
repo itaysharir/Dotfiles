@@ -30,7 +30,6 @@ Clone this repo with the following command. <br>
 - Move yabai to ~/.config/yabai <br>
 - Move skhd to ~/.config/skhd <br>
 - Move zsh/.zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
-- Move zsh/archcraft.zsh-theme to ~/.oh-my-zsh/custom/themes/archcraft.zsh-theme 
 
 ## That's it.
 - Feel free to customize my dotfiles to your liking and to submit issues. <br>
