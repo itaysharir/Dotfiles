@@ -2,6 +2,7 @@
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 cmd - d : emacsclient -c
 cmd - b : open -a firefox
+cmd - l : open -a finder
 
 # toggle yabai padding
 cmd + alt - p : yabai -m space --toggle gap; yabai -m space --toggle padding; yabai -m window --toggle border
