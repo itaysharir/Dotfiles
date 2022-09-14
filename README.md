@@ -8,7 +8,10 @@
 
 ## Installation
 ### Install dependencies
-- Install the dependencies that are avalible on homebrew, run ```brew install sketchybar alacritty yabai skhd```
+- Install yabai ```brew install koekeishiya/formulae/yabai```
+- Install skhd ```brew install koekeishiya/formulae/skhd```
+- Install alacritty ```brew install alacritty```
+- Install sketchybar ```brew tap FelixKratz/formulae; brew install sketchybar```
 - Install oh-my-zsh (to get the zsh prompt) using the instructions [here](https://ohmyz.sh/#install) (just run the command there)
 
 ### (Not necessary) Install apps i used in the screenshot
@@ -19,7 +22,7 @@
 
 ### Clone this repository
 Clone this repo with the following command. <br>
-``` git clone https://github.com/itaysharir/Dotfiles.git```
+```git clone https://github.com/itaysharir/Dotfiles.git```
 
 ### Rename some files
 - Rename zsh/zshrc to .zshrc (add a dot in the beginning of the filename)
@@ -32,8 +35,7 @@ Clone this repo with the following command. <br>
 - Move zsh/.zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
 
 ## That's it.
-- Feel free to customize my dotfiles to your liking and to submit issues. <br>
-- Also, for the zsh prompt to work you need to add ```ZSH_THEME="archcraft"``` on my .zshrc, it's already there.
+- Feel free to customize my dotfiles to your liking and to submit issues.
 
 ## Credits
 - Thanks for [distrotube on yt](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) for the bar design, i remade his bar from scratch. <br>
