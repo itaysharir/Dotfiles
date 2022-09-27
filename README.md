@@ -2,7 +2,7 @@
 ![Screen Shot 2022-09-26 at 23 27 26](https://user-images.githubusercontent.com/87126382/192373540-4fc859ea-9421-481c-b752-340d22a22bdc.png)
 
 ## Quick Note
-- The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS; you can install it with <br>
+- The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS. <br> you can install it with
 ```brew install emacs-plus --HEAD --with-no-titlebar```. <br> The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs) <br>
 
 ## Installation
