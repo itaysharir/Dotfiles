@@ -4,6 +4,16 @@
 ## Quick Note
 - The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS. <br> you can install it with
 ```brew install emacs-plus --HEAD --with-no-titlebar```. <br> The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs) <br>
+# What's New in this commit
+## Bar
+- New system tray with neu bar icons
+- New uptime widge
+- Space indicator of second display is now at the top of the bar
+- Smaller battery widget (1 = charging, 0 = discharging)
+## skhd
+- Added keyblindings for my dmenu scripts
+## yabai
+- disable rounded corners in yabai v5.0.0
 
 ## Installation
 ### Install dependencies
