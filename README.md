@@ -6,7 +6,7 @@
 ```brew install emacs-plus --HEAD --with-no-titlebar```. <br> The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs) <br>
 ## What's New
 ### Bar
-- New system tray with neu bar icons
+- New system tray with menu bar icons
 - New uptime widget
 - Space indicator of second display is now at the top of the bar
 - Smaller battery widget (1 = charging, 0 = discharging)
