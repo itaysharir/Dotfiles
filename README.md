@@ -19,6 +19,7 @@
 ## Installation
 ### Install dependencies
 - Install yabai ```brew install koekeishiya/formulae/yabai```
+- Install jq ```brew install jq```
 - Install skhd ```brew install koekeishiya/formulae/skhd```
 - Install alacritty ```brew install alacritty```
 - Install sketchybar ```brew tap FelixKratz/formulae; brew install sketchybar```
