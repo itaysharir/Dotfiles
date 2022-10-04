@@ -29,6 +29,7 @@ export LC_MESSAGES="en_US.UTF-8"
 export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
+export LC_CTYPE=en_US.UTF-8
 
 ## Set oh-my-zsh theme
 ZSH_THEME="spaceship" # set by `omz`
