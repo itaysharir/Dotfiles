@@ -10,6 +10,7 @@
 - New uptime widget
 - Space indicator of second display is now at the top of the bar
 - Smaller battery widget (1 = charging, 0 = discharging)
+- The bar widget that shows free disk space used to end in Gi. For example: "352**Gi** Free" Now it ends in just G.
 ### skhd
 - Added keyblindings for my dmenu scripts
 ### yabai
