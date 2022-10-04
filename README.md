@@ -7,7 +7,7 @@
 ## What's New
 ### Bar
 - New system tray with neu bar icons
-- New uptime widge
+- New uptime widget
 - Space indicator of second display is now at the top of the bar
 - Smaller battery widget (1 = charging, 0 = discharging)
 ### skhd
@@ -25,8 +25,7 @@
 - Install spaceship (the zsh prompt itself) ```brew install spaceship```
 
 ### (Not necessary) Install apps i used in the screenshot
-- Ascii art (Right side) - colorscripts [you can find them here](https://gitlab.com/dwt1/shell-color-scripts), I installed them using nixpkgs but you can compile from source if you want to. <br>
-- System monitor: htop - Install it with: ```brew install htop```
+- Music visualizer - cava. Install with ```brew install cava```
 
 ### Clone this repository
 Clone this repo with the following command. <br>
@@ -40,6 +39,7 @@ Clone this repo with the following command. <br>
 - Move alacritty to ~/.config/alacritty <br>
 - Move yabai to ~/.config/yabai <br>
 - Move skhd to ~/.config/skhd <br>
+- Move cava to ~/.config/cava
 - Move zsh/.zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
 
 ## That's it.
