@@ -1,5 +1,5 @@
 # Dotfiles
-![Screen Shot 2022-10-04 at 12 41 14](https://user-images.githubusercontent.com/87126382/193787813-7c4e88c8-1484-4244-b457-98a715c6674f.png)
+![Screen Shot 2022-10-08 at 21 52 12](https://user-images.githubusercontent.com/87126382/194723092-f9940be4-eb14-4d30-9773-8a9007de64dd.png)
 
 ## Quick Note
 - The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS. <br> you can install it with
