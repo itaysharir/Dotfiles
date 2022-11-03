@@ -44,8 +44,8 @@ cmd + shift - 3 : skhd -k "ctrl - b" && skhd -k "3"
 cmd + shift - 4 : skhd -k "ctrl - b" && skhd -k "4"
 cmd + shift - 5 : skhd -k "ctrl - b" && skhd -k "5"
 cmd + shift - 6 : skhd -k "ctrl - b" && skhd -k "6"
-cmd + shift - right : sh ~/.config/skhd/tmux-next-pane.sh # go to next window
-cmd + shift - left : sh ~/.config/skhd/tmux-prev-pane.sh  # go to previous window
+cmd + shift - right : sh ~/.config/skhd/tmux-next-window.sh # go to next window
+cmd + shift - left : sh ~/.config/skhd/tmux-prev-window.sh  # go to previous window
 # create/destroy panes
 cmd + alt - v : skhd -k "ctrl - b" && skhd -t "%"       # create a vertical split
 cmd + alt - h : skhd -k "ctrl - b" && skhd -t '"'       # create a horizontal split
