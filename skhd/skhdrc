@@ -16,18 +16,45 @@ cmd - e : open -a finder                                                # open f
 cmd + shift - return : open -a Xquartz && skhd -k "cmd - n"     # App launcher
 cmd + shift - t : open -a Xquartz && skhd -k "cmd - t"          # Bar changer
 cmd + shift - l : open -a XQuartz && skhd -k "cmd - p"          # Logout menu
-cmd + shift - c : open -a XQuartz && skhd -k "cmd - r"          # Screenshot menu
+cmd + shift - r : open -a XQuartz && skhd -k "cmd - r"          # Screenshot menu
 cmd + shift - b : open -a XQuartz && skhd -k "cmd - o"          # Search engine script
 cmd + shift - e : open -a XQuartz && skhd -k "cmd - f"          # Edit conigs
 cmd + shift - d : open -a XQuartz && skhd -k "cmd - d"          # Todo
+cmd + shift - m : open -a XQuartz && skhd -k "cmd - a"          # Wallpaper
 
 ### Quick stuff ###
-cmd + alt - f : yabai -m window --toggle zoom-fullscreen                                                   # Toggle parent zoom
-alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Float/unfloat the focused window
+cmd + shift - c : yabai -m window --close
+cmd + alt - f : yabai -m window --toggle zoom-fullscreen                                                   # Close a window
+alt - t : yabai -m window --toggle float; sketchybar --trigger window_focus                                # Toogle parent zoom
 alt + shift - t : yabai -m window --toggle float --grid 4:4:1:1:2:2; sketchybar --trigger window_focus     # float a window and put it in the center
 cmd + alt - b : yabai -m window --toggle border                                                            # toggle border for the focused window
 alt - o : yabai -m window --toggle topmost                                                                 # Toggle topmost
 alt - e : yabai -m window --toggle split                                                                   # Toggle split type
+alt + cmd - r : /opt/homebrew/bin/brew services restart yabai                                              # Quickly restart yabai
+
+### Tmux ###
+# create/destroy windows
+cmd + alt - return : tmux new-window -c '~/'            # open a new window
+cmd + alt - c : tmux kill-window                        # close the current window
+# move to spacific windows
+cmd + shift - 0 : skhd -k "ctrl - b" && skhd -k "0"
+cmd + shift - 1 : skhd -k "ctrl - b" && skhd -k "1"
+cmd + shift - 2 : skhd -k "ctrl - b" && skhd -k "2"
+cmd + shift - 3 : skhd -k "ctrl - b" && skhd -k "3"
+cmd + shift - 4 : skhd -k "ctrl - b" && skhd -k "4"
+cmd + shift - 5 : skhd -k "ctrl - b" && skhd -k "5"
+cmd + shift - 6 : skhd -k "ctrl - b" && skhd -k "6"
+cmd + shift - right : sh ~/.config/skhd/tmux-next-pane.sh # go to next window
+cmd + shift - left : sh ~/.config/skhd/tmux-prev-pane.sh  # go to previous window
+# create/destroy panes
+cmd + alt - v : skhd -k "ctrl - b" && skhd -t "%"       # create a vertical split
+cmd + alt - h : skhd -k "ctrl - b" && skhd -t '"'       # create a horizontal split
+cmd + alt - x : tmux kill-pane                          # close the current pane
+## focus panes
+# cmd + alt + shift - up : skhd -k "ctrl - b" && skhd -k "up"       # focus the pane above
+# cmd + alt +shift - down : skhd -k "ctrl - b" && skhd -k "down"   # focus the pane below
+# cmd + alt +shift - left : skhd -k "ctrl - b" && skhd -k "left"   # focus the pane left
+# cmd + alt + shift - right : skhd -k "ctrl - b" && skhd -k "right" # focus the pane right
 
 ### Switch focus between windows ###
 cmd + shift - right : yabai -m window --focus east      # focus the window on right
@@ -121,5 +148,5 @@ alt - f : yabai -m space --mirror y-axis         # Flip the tree
 cmd + alt - a : yabai -m space --layout bsp
 cmd + alt - s : yabai -m space --layout float
 
-### Quickly restart yabai ###
-alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+### disable ###
+cmd - q : cd # cmd + q
