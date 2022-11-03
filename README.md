@@ -10,7 +10,7 @@
 - New uptime widget
 ### skhd
 - Added A LOT more comments to the config
-- Added more flipping and rotating actions
+- Added tmux window and pane managment stuff
 ### yabai
 - Added opacity based focus
 - Added A LOT more comments to the config
