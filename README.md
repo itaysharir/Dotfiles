@@ -27,6 +27,7 @@
 - Install alacritty ```brew install alacritty```
 - Install sketchybar ```brew tap FelixKratz/formulae; brew install sketchybar```
 - Install oh-my-zsh (zsh extention manager) using the instructions [here](https://ohmyz.sh/#install) (just run the command there)
+- Install tmux **(NOT IN THE SCREENSHOT, NOT NECESERY)** ```brew install tmux```
 
 ### (Not necessary) Install apps i used in the screenshot
 - Music visualizer - cava. Install with ```brew install cava```
@@ -36,7 +37,8 @@ Clone this repo with the following command. <br>
 ```git clone https://github.com/itaysharir/Dotfiles.git```
 
 ### Rename some files
-- Rename zsh/zshrc to .zshrc (add a dot in the beginning of the filename). Github wouldn't let me upload hidden files.
+- Rename ```zshrc``` to ```.zshrc```
+- Rename ```tmux.conf``` to ```.tmux.conf```
 
 ### Move files
 - move sketchybar to ~/.config/sketchybar <br>
@@ -44,7 +46,8 @@ Clone this repo with the following command. <br>
 - Move yabai to ~/.config/yabai <br>
 - Move skhd to ~/.config/skhd <br>
 - Move cava to ~/.config/cava
-- Move zsh/.zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
+- Move .zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
+- Move .tmux.conf to ~/.tmux.conf (renamed from tmux.conf to .tmux.conf)
 
 ## That's it.
 - Feel free to customize my dotfiles to your liking and to submit issues.
