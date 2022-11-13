@@ -33,20 +33,68 @@ export LC_TIME="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
 ### Aliases ###
-# upgrades
-alias brewup='echo "Updating homebrew itself:" && brew update && echo "_______________________________" && echo " " && echo "Upadating packages..." && brew upgrade && echo "Everything is up-to-date."'
-alias portup='sudo port selfupdate && sudo port upgrade outdated'
-
 # brew
 alias bw='brew'
 alias bwI='brew install'
 alias bwE='brew reinstall'
 alias bwR='brew remove'
-alias bwU='brewup'
+bwU () {
+    echo "Updating homebrew itself:"
+    brew update
+    echo "_______________________________"
+    echo " "
+    echo "Upadating packages..."
+    brew upgrade
+    echo "Everything is up-to-date."
+}
+alias bwO='brew outdated'
 alias bwS='brew services'
 alias bwRestart='brew services restart'
 alias bwStart='brew services start'
 alias bwStop='brew services stop'
+bwH () {
+    echo "List of brew aliases:"
+    echo "_______________________________"
+    echo " "
+    echo "bw          =      brew"
+    echo "bwI         =      brew install"
+    echo "bwE         =      brew reinstall"
+    echo "bwR         =      brew remove"
+    echo "bwU         =      update everything"
+    echo "bwO         =      brew outdated"
+    echo "bwS         =      brew services"
+    echo "bwRestart   =      brew services restart"
+    echo "bwStart     =      brew services start"
+    echo "bwStop      =      brew services stop"
+}
+
+# macports
+alias pr='port'
+alias prI='sudo port install'
+alias prE='sudo port reinstall'
+alias prR='sudo port uninstall'
+prU () {
+    echo "Updating macports itself:"
+    sudo port selfupdate
+    echo "Macports is up-to-date."
+    echo "_______________________________"
+    echo " "
+    echo "Upadating packages..."
+    sudo port upgrade outdated
+    echo "Everything is up-to-date."
+}
+alias prO='port outdated'
+prH () {
+    echo "List of port aliases:"
+    echo "_______________________________"
+    echo " "
+    echo "pr          =      port"
+    echo "prI         =      sudo port install"
+    echo "prE         =      sudo port reinstall"
+    echo "prR         =      sudo port uninstall"
+    echo "prU         =      update everything"
+    echo "prO         =      port outdated"
+}
 
 # shorten commands
 alias cle='clear'
@@ -108,8 +156,7 @@ source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # enable syntax hi
 
 ### function to easily extract files ###
 # usage: ex <file>
-ex ()
-{
+ex () {
     if [ -f "$1" ] ; then
      case $file in
        *.tar.bz2)   tar xjf $1   ;;
