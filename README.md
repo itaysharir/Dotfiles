@@ -37,17 +37,17 @@ Clone this repo with the following command. <br>
 ```git clone https://github.com/itaysharir/Dotfiles.git```
 
 ### Rename some files
-- Rename ```zshrc``` to ```.zshrc```
-- Rename ```tmux.conf``` to ```.tmux.conf```
+- Rename ```zshrc``` to ```.zshrc``` you can do it with ```mv zshrc .zshrc```
+- Rename ```tmux.conf``` to ```.tmux.conf``` you can do that with ```mv tmux.conf .tmux.conf```
 
 ### Move files
-- move sketchybar to ~/.config/sketchybar <br>
-- Move alacritty to ~/.config/alacritty <br>
-- Move yabai to ~/.config/yabai <br>
-- Move skhd to ~/.config/skhd <br>
-- Move cava to ~/.config/cava
-- Move .zshrc to ~/.zshrc (renamed from zshrc to .zshrc)
-- Move .tmux.conf to ~/.tmux.conf (renamed from tmux.conf to .tmux.conf)
+- move sketchybar to ~/.config/sketchybar ```mv -r sketchybar ~/.config/sketchybar``` <br> 
+- Move alacritty to ~/.config/alacritty ```mv -r alacritty ~/.config/alacritty``` <br>
+- Move yabai to ~/.config/yabai ```mv -r yabai ~/.config/yabai``` <br>
+- Move skhd to ~/.config/skhd ```mv -r skhd ~/.config/skhd``` <br>
+- Move cava to ~/.config/cava ```mv -r cava ~/.config/cava```
+- Move .zshrc to ~/.zshrc ```mv .zshrc ~/.zshrc```
+- Move .tmux.conf to ~/.tmux.conf ```mv .tmux.conf ~/.tmux.conf```
 
 ## That's it.
 - Feel free to customize my dotfiles to your liking and to submit issues.
