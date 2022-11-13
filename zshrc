@@ -23,25 +23,35 @@ export BOOTSTRAP=/opt/pacman
 export PATH=$BOOTSTRAP/bin:$PATH
 
 # locale
-export LANG="en_US.UTF-8"           # configure LANG variable
-export LC_COLLATE="en_US.UTF-8"     # configure LC_COLLATE variable
-export LC_CTYPE="en_US.UTF-8"       # configure LC_CTYPE variable
-export LC_MESSAGES="en_US.UTF-8"    # configure LC_MESSAGES variable
-export LC_MONETARY="en_US.UTF-8"    # configure LC_MONTERAY variable
-export LC_NUMERIC="en_US.UTF-8"     # configure LC_NUMERIC variable
-export LC_TIME="en_US.UTF-8"        # configure LC_TIME variable
-export LC_CTYPE="en_US.UTF-8"       # configure LC_CTYPE variable
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 ### Aliases ###
-# package managment
-alias brewup='brew update && brew upgrade'                           # Update and upgrade homebrew
-alias portup='sudo port selfupdate && sudo port upgrade outdated'    # update macports
-alias allup='brewup && portup'                                       # Update all packages
+# upgrades
+alias brewup='echo "Updating homebrew itself:" && brew update && echo "_______________________________" && echo " " && echo "Upadating packages..." && brew upgrade && echo "Everything is up-to-date."'
+alias portup='sudo port selfupdate && sudo port upgrade outdated'
+
+# brew
+alias bw='brew'
+alias bwI='brew install'
+alias bwE='brew reinstall'
+alias bwR='brew remove'
+alias bwU='brewup'
+alias bwS='brew services'
+alias bwRestart='brew services restart'
+alias bwStart='brew services start'
+alias bwStop='brew services stop'
 
 # shorten commands
-alias cle='clear' # clear the screen quickly
-alias ne='neofetch' # run neofetch quickly
-alias v="nvim" # open neovim quickly
+alias cle='clear'
+alias ne='neofetch'
+alias v="nvim"
 
 # shpotify
 alias play='spotify play'                         # play a song on spotify
@@ -54,21 +64,15 @@ alias nowplaying='spotify status'                 # see details about currently 
 alias shuffle='spotify toggle shuffle'            # toggle shuffle
 
 # git
-alias addup='git add -u'        # add a file
-alias addall='git add .'        # add the whole directory
-alias branch='git branch'       # check branch
-alias clone='git clone'         # clone a repository
-alias commit='git commit -m'    # commit with a message
-alias fetch='git fetch'         # fetch details about a repository
-alias pull='git pull origin'    # "undo" a push
-alias push='git push origin'    # push changes
-alias stat='git status'         # view loocal repo status
-
-# make
-alias rootmakeins='sudo make install'    # make install with root privlages
-alias makeins='make install'             # make install
-alias rootmakedel='sudo make uninstall'  # make uninstall
-alias makedel='make uninstall'           # make uninstall with root privlages
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'
 
 # source .zshrc
 alias src='source ~/.zshrc' # apply changes made in .zshrc without closing zsh
@@ -82,19 +86,19 @@ alias doomupgrade="~/.emacs.d/bin/doom upgrade"   # upgrade doom emacs
 alias doompurge="~/.emacs.d/bin/doom purge"       # purge plugins in doom emacs
 
 # shorten cd ../../../
-alias .1='cd ..'              # cd 1 directory up
-alias .2='cd ../..'           # cd 2 directories up
-alias .3='cd ../../..'        # cd 3 directories up
-alias .4='cd ../../../..'     # cd 4 directories up
-alias .5='cd ../../../../..'  # cd 5 directories up
+alias .1='cd ..'              
+alias .2='cd ../..'           
+alias .3='cd ../../..'        
+alias .4='cd ../../../..'     
+alias .5='cd ../../../../..'  
 
 # when creating a directory, create all parent directories
 alias mkdir='mkdir -pv'
 
 # confrimations
-alias mv='mv -i' # confirm before overwriting a file with mv
-alias cp='cp -i' # confirm before overwriting a file with cp
-alias ln='ln -i' # confirm before overwriting a file with ln
+alias mv='mv -i' 
+alias cp='cp -i' 
+alias ln='ln -i' 
 
 ### tell omz which plugins to load ###
 plugins=(
@@ -130,6 +134,5 @@ ex ()
 }
 
 ### startup ###
-bindkey -v                  # set vi mode
 source $ZSH/oh-my-zsh.sh    # run omz load script
 source /Users/itaysharir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
