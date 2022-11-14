@@ -183,3 +183,4 @@ ex () {
 ### startup ###
 source $ZSH/oh-my-zsh.sh    # run omz load script
 source /Users/itaysharir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
