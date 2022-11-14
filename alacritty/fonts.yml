@@ -5,26 +5,26 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "Liga SFMono Nerd Font"
+    family: "FiraCode Nerd Font"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "Liga SFMono Nerd Font"
+    family: "Hack Nerd Font"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "Liga SFMono Nerd Font"
+    family: "Hack Nerd Font"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Liga SFMono Nerd Font"
+    family: "Hack Nerd Font"
     #style: Bold Italic
 
   # Point size
-  size: 13
+  size: 13.5
 
   # Offset
   #offset:
