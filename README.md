@@ -36,10 +36,6 @@
 Clone this repo with the following command. <br>
 ```git clone https://github.com/itaysharir/Dotfiles.git```
 
-### Rename some files
-- Rename ```zshrc``` to ```.zshrc``` you can do it with ```mv zshrc .zshrc```
-- Rename ```tmux.conf``` to ```.tmux.conf``` you can do that with ```mv tmux.conf .tmux.conf```
-
 ### Move files
 - move sketchybar to ~/.config/sketchybar ```mv -r sketchybar ~/.config/sketchybar``` <br> 
 - Move alacritty to ~/.config/alacritty ```mv -r alacritty ~/.config/alacritty``` <br>
