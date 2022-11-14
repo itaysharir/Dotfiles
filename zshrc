@@ -7,7 +7,6 @@
 
 ### Export ###
 export TERM="xterm-256color"                          # proper colors
-export ZSH_THEME="spaceship"                          # Set oh-my-zsh theme
 export ZSH="$HOME/.oh-my-zsh"                         # declare a variable to omz path
 
 ### Load tmux ###
