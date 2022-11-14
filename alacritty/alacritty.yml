@@ -25,7 +25,7 @@ window:
     x: 20
     y: 20
 
-  decorations: none
+  decorations: buttonless
   startup_mode: Windowed
   dynamic_title: true
 
