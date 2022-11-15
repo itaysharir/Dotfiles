@@ -29,7 +29,7 @@ sketchybar --add       alias              "Control Center,Sound" right          
            --set    "Control Center,Sound" update_freq=1                                 \
                                           icon.drawing=off                              \
                                           label.font="Font Awesome 6 Brands:Regular:12.0"           \
-                                          background.padding_right=-16                           \
+                                          background.padding_right=-14                           \
                                           background.padding_left=-7                           \
 
 # sketchybar --add       item               obs right                                       \
