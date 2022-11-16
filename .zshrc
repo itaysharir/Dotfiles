@@ -114,12 +114,15 @@ alias shuffle='spotify toggle shuffle'            # toggle shuffle
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
+alias checkout='git checkout'
 alias clone='git clone'
 alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'
+alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias tag='git tag'
+alias newtag='git tag -a'
 
 # source .zshrc
 alias src='source ~/.zshrc' # apply changes made in .zshrc without closing zsh
@@ -181,5 +184,5 @@ ex () {
 
 ### startup ###
 source $ZSH/oh-my-zsh.sh    # run omz load script
-source /Users/itaysharir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/$(whoami)/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
