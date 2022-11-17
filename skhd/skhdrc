@@ -44,17 +44,17 @@ cmd + shift - 3 : skhd -k "ctrl - b" && skhd -k "3"
 cmd + shift - 4 : skhd -k "ctrl - b" && skhd -k "4"
 cmd + shift - 5 : skhd -k "ctrl - b" && skhd -k "5"
 cmd + shift - 6 : skhd -k "ctrl - b" && skhd -k "6"
-cmd + shift - right : sh ~/.config/skhd/tmux-next-window.sh # go to next window
-cmd + shift - left : sh ~/.config/skhd/tmux-prev-window.sh  # go to previous window
+hyper - right : sh ~/.config/skhd/tmux-next-window.sh # go to next window
+hyper - left : sh ~/.config/skhd/tmux-prev-window.sh  # go to previous window
 # create/destroy panes
 cmd + alt - v : skhd -k "ctrl - b" && skhd -t "%"       # create a vertical split
 cmd + alt - h : skhd -k "ctrl - b" && skhd -t '"'       # create a horizontal split
 cmd + alt - x : tmux kill-pane                          # close the current pane
 ## focus panes
-# cmd + alt + shift - up : skhd -k "ctrl - b" && skhd -k "up"       # focus the pane above
-# cmd + alt +shift - down : skhd -k "ctrl - b" && skhd -k "down"   # focus the pane below
-# cmd + alt +shift - left : skhd -k "ctrl - b" && skhd -k "left"   # focus the pane left
-# cmd + alt + shift - right : skhd -k "ctrl - b" && skhd -k "right" # focus the pane right
+# cmd + ctrl + shift - up : skhd -k "ctrl - b" && skhd -k "up"       # focus the pane above
+# cmd + ctrl + shift - down : skhd -k "ctrl - b" && skhd -k "down"   # focus the pane below
+# cmd + ctrl + shift - left : skhd -k "ctrl - b" && skhd -k "left"   # focus the pane left
+# cmd + ctrl + shift - right : skhd -k "ctrl - b" && skhd -k "right" # focus the pane right
 
 ### Switch focus between windows ###
 cmd + shift - right : yabai -m window --focus east      # focus the window on right
@@ -104,6 +104,10 @@ cmd + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
 cmd + alt - left : yabai -m window --space prev; yabai -m space --focus prev    # To the space on the left
 cmd + alt - right : yabai -m window --space next; yabai -m space --focus next   # To the spave on the right
 
+### Focus displays ###
+ctrl + alt - left  : yabai -m display --focus 1     # focus main display
+ctrl + alt - right  : yabai -m display --focus 2    # focus second display
+
 ### Increase window size
 shift + alt - a : yabai -m window --resize left:-20:0
 shift + alt - s : yabai -m window --resize bottom:0:20
@@ -139,14 +143,17 @@ alt - 9 : yabai -m window --space 9
 alt - left : yabai -m window --space prev   # Send window to space on the left
 alt - right : yabai -m window --space next  # Send window to space on the right
 
+### Fullscreen ###
+cmd - space : yabai -m window --toggle zoom-fullscreen &&
+
 ### Rotate and flip ###
 alt - r : yabai -m space --rotate 90             # Rotate the tree 90 degrees
 alt + shift - r : yabai -m space --rotate 180    # Rotate the tree 180 degrees
 alt - f : yabai -m space --mirror y-axis         # Flip the tree
 
 ### Change layout of desktop ###
-cmd + alt - a : yabai -m space --layout bsp
-cmd + alt - s : yabai -m space --layout float
+cmd + alt - a : yabai -m config layout bsp
+cmd + alt - s : yabai -m config layout float
 
 ### disable ###
 cmd - q : cd # cmd + q
