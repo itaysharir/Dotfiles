@@ -7,7 +7,6 @@
 
 ### Export ###
 export TERM="xterm-256color"                          # proper colors
-export ZSH="$HOME/.oh-my-zsh"                         # declare a variable to omz path
 
 ### Load tmux ###
 if [ "$TMUX" = "" ]; then tmux; fi
@@ -150,12 +149,6 @@ alias mv='mv -i'
 alias cp='cp -i' 
 alias ln='ln -i' 
 
-### tell omz which plugins to load ###
-plugins=(
-  zsh-autosuggestions
-)
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # enable syntax highlighting
-
 ### function to easily extract files ###
 # usage: ex <file>
 ex () {
@@ -183,6 +176,5 @@ ex () {
 }
 
 ### startup ###
-source $ZSH/oh-my-zsh.sh    # run omz load script
 source /Users/$(whoami)/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
