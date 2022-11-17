@@ -6,7 +6,8 @@
 #               |___/  
 
 ### Export ###
-export TERM="xterm-256color"                          # proper colors
+export TERM="xterm-256color"  # proper colors
+export ZSH="$HOME/.oh-my-zsh" # omz directory
 
 ### Load tmux ###
 if [ "$TMUX" = "" ]; then tmux; fi
@@ -179,4 +180,5 @@ ex () {
 ### startup ###
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"

@@ -12,15 +12,14 @@ cmd - b : /Applications/Firefox.app/Contents/MacOS/firefox              # open f
 cmd - e : open -a finder                                                # open finder
 
 ### Various dmenu scripts ###
-# Note: Some things are configured in XQuartz, this wont work out of the box
-cmd + shift - return : open -a Xquartz && skhd -k "cmd - n"     # App launcher
-cmd + shift - t : open -a Xquartz && skhd -k "cmd - t"          # Bar changer
-cmd + shift - l : open -a XQuartz && skhd -k "cmd - p"          # Logout menu
-cmd + shift - r : open -a XQuartz && skhd -k "cmd - r"          # Screenshot menu
-cmd + shift - b : open -a XQuartz && skhd -k "cmd - o"          # Search engine script
-cmd + shift - e : open -a XQuartz && skhd -k "cmd - f"          # Edit conigs
-cmd + shift - d : open -a XQuartz && skhd -k "cmd - d"          # Todo
-cmd + shift - m : open -a XQuartz && skhd -k "cmd - a"          # Wallpaper
+cmd + shift - return : /bin/bash -l -c "sh ~/dmenu\ scripts/apps/script.sh"      # App launcher
+cmd + shift - t : /bin/bash -l -c "sh ~/dmenu\ scripts/themes/.script.sh"        # Bar changer
+cmd + shift - l : /bin/bash -l -c "sh ~/dmenu\ scripts/logout/.script.sh"        # Logout menu
+cmd + shift - r : /bin/bash -l -c "sh ~/dmenu\ scripts/screenshot/.script.sh"    # Screenshot menu
+cmd + shift - b : /bin/bash -l -c "sh ~/dmenu\ scripts/web/.script.sh"           # Search engine script
+cmd + shift - e : /bin/bash -l -c "sh ~/dmenu\ scripts/editconfig/.script.sh"    # Edit conigs
+cmd + shift - d : /bin/bash -l -c "sh ~/dmenu\ scripts/todo/.script.sh"          # Todo
+cmd + shift - m : /bin/bash -l -c "sh ~/dmenu\ scripts/wallpaper/.script.sh"     # Wallpaper
 
 ### Quick stuff ###
 cmd + shift - c : yabai -m window --close
