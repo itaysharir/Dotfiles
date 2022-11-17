@@ -112,6 +112,7 @@ alias shuffle='spotify toggle shuffle'            # toggle shuffle
 # git
 alias addup='git add -u'
 alias addall='git add .'
+alias add='git add'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
@@ -176,5 +177,6 @@ ex () {
 }
 
 ### startup ###
-source /Users/$(whoami)/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
