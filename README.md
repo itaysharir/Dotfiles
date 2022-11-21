@@ -29,6 +29,13 @@
 - Install oh-my-zsh (zsh extention manager) using the instructions [here](https://ohmyz.sh/#install) (just run the command there)
 - Install tmux **(NOT IN THE SCREENSHOT, NOT NECESERY)** ```brew install tmux```
 
+# Fonts
+To install the following fonts with homebrew, run this command: ```brew tap homebrew/cask-fonts```
+- Ubuntu Font ```brew install font-ubuntu```
+- FontAwesome ```brew install font-fontawesome```
+- Hack Nerd Font ```brew install font-hack-nerd-font```
+- FiraCode Nerd Font ```brew install font-fira-code-nerd-font```
+
 ### (Not necessary) Install apps i used in the screenshot
 - Music visualizer - cava. Install with ```brew install cava```
 
