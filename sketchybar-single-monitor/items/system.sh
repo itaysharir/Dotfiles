@@ -1,32 +1,17 @@
 #!/usr/bin/env sh
 
-# sketchybar --add       item               discord right                                       \
-#            --set       discord            background.image=/Users/itaysharir/.config/sketchybar/assets/discord-logo.png \
-#                                           background.image.scale=0.015                            \
-#                                           background.drawing=on                                 \
-#                                           background.padding_right=4                            \
-
-sketchybar --add       alias              "Cardhop,Item-0" right                       \
-           --set    "Cardhop,Item-0" update_freq=1                                 \
-                                          icon.drawing=off                              \
-                                          label.drawing=off                             \
-                                          background.padding_left=-10                    \
-                                          background.padding_right=-11                            \
-
+sketchybar --add       item               discord right                                       \
+           --set       discord            background.image=/Users/itaysharir/.config/sketchybar/assets/discord-logo.png \
+                                          background.image.scale=0.015                            \
+                                          background.drawing=on                                 \
+                                          background.padding_right=4                            \
 
 sketchybar --add       alias              "Control Center,WiFi" right                       \
            --set    "Control Center,WiFi" update_freq=1                                 \
                                           icon.drawing=off                              \
                                           label.drawing=off                             \
                                           background.padding_left=-10                    \
-                                          background.padding_right=-8                            \
-
-# sketchybar --add       alias              "Raycast,raycastIcon" right                       \
-#            --set    "Control Center,WiFi Raycast,raycastIcon" update_freq=1                                 \
-#                                           icon.drawing=off                              \
-#                                           label.drawing=off                             \
-#                                           background.padding_left=-10                    \
-#                                           background.padding_right=-8                            \
+                                          background.padding_right=-11                            \
 
 # sketchybar --add       item               spotify right                                       \
 #            --set       spotify            background.image=/Users/itaysharir/.config/sketchybar/assets/spotify-logo.png \
