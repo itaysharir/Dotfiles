@@ -7,7 +7,7 @@
 
 ### Variables ###
 # Note: These variables are menat to by easily changed by anyone.
-export external_bar_height="24"         # Height of top bar in pt                                         (usage: 24/16/any number)
+export external_bar_height="24"         # Height of external bar in pt                                    (usage: 24/16/any number)
 export external_bar_position="top"      # position of external bar                                        (usage: top/bottom/left/right)
 export shadow_toggle="off"              # Determines wether window shadows are on                         (usage: on/off)
 export mouse_mod="cmd"                  # key that when pressed, mouse can be used to move and resize     (usage: cmd/alt/ctrl/shift)
@@ -24,7 +24,7 @@ export autoraise_toggle="on"            # turn autoraise on or off              
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"  # If yabai detected that i loaded the scripting addition, restart yabai
 
-### Configure mouse autoraise ###
+### Focus the window that is hoverd with the mouse ###
 if [[ $autoraise_toggle == "on" ]]; then
    yabai -m config focus_follows_mouse autoraise
 fi
@@ -87,7 +87,7 @@ if [[ $external_bar_position == "right" ]]; then
 fi
 
 ### Window rules/exeptions ###
-yabai -m rule --add app="^(Calculator|System Settings|zoom.us|Photo Booth|Archive Utility|Color Picker|balenaEtcher)$" manage=off  # Don't tile unresizable apps
+yabai -m rule --add app="^(Calculator|System Preferences|zoom.us|Photo Booth|Archive Utility|Color Picker|balenaEtcher)$" manage=off  # Don't tile unresizable apps
 yabai -m rule --add app="^(XQuartz)$" layer=above manage=off  # Don't tile xquartz (i use it for dmenu)
 
 ### Space labels ###
