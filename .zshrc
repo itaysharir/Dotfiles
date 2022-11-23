@@ -70,7 +70,9 @@ bwH () {
 # macports
 alias pr='port'
 alias prI='sudo port install'
-alias prE='sudo port reinstall'
+prE () {
+    sudo port uninstall $1 && sudo port install $1
+}
 alias prR='sudo port uninstall'
 prU () {
     echo "Updating macports itself:"
@@ -89,7 +91,7 @@ prH () {
     echo " "
     echo "pr          =      port"
     echo "prI         =      sudo port install"
-    echo "prE         =      sudo port reinstall"
+    echo "prE         =      sudo port uninstall <package> && sudo port install <package>"
     echo "prR         =      sudo port uninstall"
     echo "prU         =      update everything"
     echo "prO         =      port outdated"
