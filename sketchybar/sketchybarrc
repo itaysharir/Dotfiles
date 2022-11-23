@@ -120,7 +120,7 @@ sketchybar --add       event        window_focus                                
            --subscribe window_title window_focus title_change                      \
 
 ### Menu bar items ###
-# . "$ITEM_DIR/system.sh"
+. "$ITEM_DIR/system.sh"
 
 ### Time Widget ###
 sketchybar --add item clock right                                                  \
