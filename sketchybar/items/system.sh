@@ -21,11 +21,18 @@ sketchybar --add       alias              "Control Center,WiFi" right           
                                           background.padding_left=-12                    \
                                           background.padding_right=-8                            \
 
-sketchybar --add       item               spotify right                                       \
-           --set       spotify            background.image=/Users/itaysharir/.config/sketchybar/assets/spotify-logo.png \
-                                          background.image.scale=0.007                            \
-                                          background.drawing=on                                 \
-                                          background.padding_left=-2                    \
+sketchybar --add       alias              "SystemUIServer,TMMenuExtra" right                       \
+           --set    "SystemUIServer,TMMenuExtra" update_freq=1                                 \
+                                          icon.drawing=off                              \
+                                          label.drawing=off                             \
+                                          background.padding_left=-12                    \
+                                          background.padding_right=-8                            \
+
+# sketchybar --add       item               spotify right                                       \
+#            --set       spotify            background.image=/Users/itaysharir/.config/sketchybar/assets/spotify-logo.png \
+#                                           background.image.scale=0.007                            \
+#                                           background.drawing=on                                 \
+#                                           background.padding_left=-2                    \
 
 sketchybar --add       alias              "Control Center,Sound" right                       \
            --set    "Control Center,Sound" update_freq=1                                 \
