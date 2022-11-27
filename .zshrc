@@ -47,6 +47,7 @@ bwU () {
     echo "Everything is up-to-date."
 }
 alias bwO='brew outdated'
+alias bwT='brew tap'
 alias bwS='brew services'
 alias bwRestart='brew services restart'
 alias bwStart='brew services start'
