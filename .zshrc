@@ -42,12 +42,13 @@ bwU () {
     brew update
     echo "_______________________________"
     echo " "
-    echo "Upadating packages..."
     brew upgrade
     echo "Everything is up-to-date."
 }
 alias bwO='brew outdated'
 alias bwT='brew tap'
+alias bwL='brew list'
+alias bwLp='brew list | wc -l'
 alias bwS='brew services'
 alias bwRestart='brew services restart'
 alias bwStart='brew services start'
@@ -71,6 +72,8 @@ bwH () {
 # macports
 alias pr='port'
 alias prI='sudo port install'
+alias prL='port list'
+alias prLp='port list | wc -l'
 prE () {
     sudo port uninstall $1 && sudo port install $1
 }
@@ -127,6 +130,12 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+publish () {
+    cd ~/websites.github.io
+    git add .
+    git commit -m $1
+    git push
+}
 
 # source .zshrc
 alias src='source ~/.zshrc' # apply changes made in .zshrc without closing zsh

@@ -21,7 +21,7 @@ sketchybar --add   space          space_template left                \
                                   ignore_association=on              \
                                                                      \
            --clone spaces_1.label label_template                     \
-                                  associated_display=2               \
+                                  associated_display=1               \
                                   label.width=45                     \
                                   label.align=center                 \
                                   position=left                      \
@@ -75,6 +75,30 @@ sketchybar --add   space          space_template left                \
                                   drawing=on                         \
                                   script="$PLUGIN_DIR/space.sh"      \
                                                                      \
+           --clone spaces_2.code  space_template                     \
+           --set   spaces_2.code  associated_space=7                 \
+                                  icon=mus                           \
+                                  icon.highlight_color=0xff76add0        \
+                                  icon.background.color=0xff76add0   \
+                                  drawing=on                         \
+                                  script="$PLUGIN_DIR/space.sh"      \
+                                                                     \
+           --clone spaces_2.tex   space_template                     \
+           --set   spaces_2.tex   associated_space=8                 \
+                                  icon=vid                           \
+                                  icon.highlight_color=0xff76add0   \
+                                  icon.background.color=0xff76add0    \
+                                  drawing=on                         \
+                                  script="$PLUGIN_DIR/space.sh"      \
+                                                                     \
+           --clone spaces_2.web   space_template                     \
+           --set   spaces_2.web   associated_space=9                 \
+                                  icon=gfx                           \
+                                  icon.highlight_color=0xff76add0      \
+                                  icon.background.color=0xff76add0   \
+                                  drawing=on                         \
+                                  script="$PLUGIN_DIR/space.sh"      \
+																																			\
            --add   bracket        spaces_1                           \
                                   spaces_1.label                     \
                                   spaces_1.idle                      \
@@ -83,44 +107,9 @@ sketchybar --add   space          space_template left                \
                                   spaces_1.help                      \
                                   spaces_1.music                     \
                                   spaces_1.nine                      \
-                                                                     \
-           --set   space_template associated_display=2               \
-                                                                     \
-           --clone spaces_2.label label_template                     \
-                                  label.width=38                     \
-                                  label.align=center                 \
-                                  associated_display=1               \
-                                  position=left                      \
-                                  drawing=on                         \
-                                                                     \
-           --clone spaces_2.code  space_template                     \
-           --set   spaces_2.code  associated_space=7                 \
-                                  icon=mus                           \
-                                  icon.highlight_color=0xff76add0        \
-                                  icon.background.color=0xff76add0   \
-                                  drawing=on                         \
-                                  script="$PLUGIN_DIR/space-top.sh"      \
-                                                                     \
-           --clone spaces_2.tex   space_template                     \
-           --set   spaces_2.tex   associated_space=8                 \
-                                  icon=vid                           \
-                                  icon.highlight_color=0xff76add0   \
-                                  icon.background.color=0xff76add0    \
-                                  drawing=on                         \
-                                  script="$PLUGIN_DIR/space-top.sh"      \
-                                                                     \
-           --clone spaces_2.web   space_template                     \
-           --set   spaces_2.web   associated_space=9                 \
-                                  icon=gfx                           \
-                                  icon.highlight_color=0xff76add0      \
-                                  icon.background.color=0xff76add0   \
-                                  drawing=on                         \
-                                  script="$PLUGIN_DIR/space-top.sh"      \
-                                                                     \
-           --add   bracket        spaces_2                           \
-                                  spaces_2.label                     \
-                                  spaces_2.code                      \
-                                  spaces_2.web                       \
-                                  spaces_2.tex                       \
-                                  spaces_2.web                       \
+                                  spaces_1.label                     \
+                                  spaces_1.code                      \
+                                  spaces_1.web                       \
+                                  spaces_1.tex                       \
+                                  spaces_1.web                       \
 
