@@ -37,11 +37,11 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
    
 ## 🏜️ The themes
 ### 🕹️Pacman:
-|<img src="assets/pacman_rice.png”  align="center" width="600px">|<img src="assets/pacman_rice_used.png” align="center" width="600px">|
+|<img src="assets/pacman_rice.png" align="center" width="600px">|<img src="assets/pacman_rice_used.png" align="center" width="600px">|
 |---|---|
 
 ### 🎤 DT’s Xmonad:
-|<img src="assets/dt-xmonad_rice.png”  align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png” align="center" width="600px">|
+|<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
 ## 📦 Setup
