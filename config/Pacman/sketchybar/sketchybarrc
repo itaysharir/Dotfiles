@@ -1,0 +1,59 @@
+#!/usr/bin/env sh
+#  ___
+# |_ _| |_ __ _ _   _
+#  | || __/ _` | | | |  github: https://github.com/itaysharir
+#  | || || (_| | |_| |  reddit: u/visible-pop-2576
+# |___|\__\__,_|\__, |  dotfiles: https://github.com/itaysharir/Dotfiles
+#               |___/
+
+### Store plugin and item directories in variables ###
+ITEM_DIR="$HOME/.config/sketchybar/items"       # Directory where the items are configured
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"   # Directory where all the plugin scripts are stored
+
+### Define defult font ###
+FONT="scientifica" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+
+### Padding ###
+PADDINGS=3  # All elements use this padidng (Wherever i didn't need it, I used negetive padding)
+
+### Setting up the general bar appearance and default values ###
+sketchybar --bar     height=50                                                     \
+                     corner_radius=14                                               \
+                     border_width=0                                                \
+                     margin=95                                                      \
+                     blur_radius=0                                                 \
+                     position=top                                                  \
+                     padding_left=4                                                \
+                     padding_right=4                                               \
+                     color=0xff1a1c26                                              \
+                     topmost=off                                                   \
+                     sticky=on                                                     \
+                     font_smoothing=off                                            \
+                     y_offset=8                                                    \
+                     notch_width=0                                                 \
+                                                                                   \
+           --default drawing=on                                                    \
+                     updates=when_shown                                            \
+                     icon.padding_left=$PADDINGS                                   \
+                     icon.padding_right=$PADDINGS                                  \
+                     label.padding_left=$PADDINGS                                  \
+                     label.padding_right=$PADDINGS                                 \
+                     background.padding_right=$PADDINGS                            \
+                     background.padding_left=$PADDINGS                             \
+
+### Left ###
+. "$ITEM_DIR/arch_menu.sh" # arch logo
+. "$ITEM_DIR/system.sh"    # resources monitor
+. "$ITEM_DIR/spotify.sh"   # spotify widget
+
+### Center ###
+. "$ITEM_DIR/spaces.sh"    # workspaces
+
+### Right ###
+. "$ITEM_DIR/time.sh"      # time
+. "$ITEM_DIR/updates.sh"   # updates
+. "$ITEM_DIR/sound.sh"     # sound
+. "$ITEM_DIR/battery.sh"   # battery
+. "$ITEM_DIR/playing.sh"   # playing on spotify
+
+echo "sketchybar configuation loaded.."

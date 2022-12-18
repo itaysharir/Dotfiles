@@ -1,60 +1,97 @@
-# Dotfiles
-![Screen Shot 2022-10-16 at 21 54 51](https://user-images.githubusercontent.com/87126382/196052893-bdc32b72-a9c2-4ec1-a21b-2c321156a486.png)
+# Dotfiles | macOS themes collection
 
-## Quick Note
-- The text editor i use is emacs, more spacifically emacs-plus. Which is a tweaked version of emacs for macOS. <br> you can install it with
-```brew install emacs-plus --HEAD --with-no-titlebar-and-round-corners```. <br> The Emacs configuration i use is one i didn't actually create, you can find it [here](https://github.com/doomemacs/doomemacs) <br>
-## What's New
-### Bar
-- Removed the system tray (for now)
-- New uptime widget
-### skhd
-- Added A LOT more comments to the config
-- Added tmux window and pane managment stuff
-### yabai
-- Added opacity based focus
-- Added A LOT more comments to the config
-- Orginized quick settings with variables in the config
-- Enabled rounded corners
-### README (emacs)
-- Now when i have rounded corners enabled in yabai, i changed ```--with-no-titlebar``` to ```--with-no-titlebar-and-round-corners```
+## 🏓 Introduction
+I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behave just like i want it to. These are my Dotfiles, with 2 themes. Enjoy!
+https://user-images.githubusercontent.com/87126382/208316922-5e40e95a-5ce8-4d09-afd7-1add83b876a8.mp4
 
-## Installation
+## 🌃 Dmenu script for switching between themes
+<img src="assets/themes_dmenu.png" align="right" height="200px" width="300">
+
+|OS|macOS (Ventura, 13.1)|
+|:---:|:---:|
+|WM|[yabai](https://github.com/koekeishiya/yabai)|
+|Bar|[sketchybar](https://github.com/FelixKratz/SketchyBar)|
+|Menu|[Dmenu](https://tools.suckless.org/dmenu/)|
+|Terminal|[alacritty](https://github.com/alacritty/alacritty)|
+
+## 🚀 Why are my Dotfiles different than (most) others?
+- 2 different themes instead of 1
+- A dmenu script to easily switch between these themes
+- Speaking of dmenu, my Dotfiles have 7 other dmenu scripts for you to explore and use!
+
+<table align="center">
+   <tr>
+      <th align="center">
+         <sup><sub>:warning: WARNING :warning:</sub></sup>
+      </th>
+   </tr>
+   <tr>
+      <td align="center">
+      
+      I USE AN M1 MACBOOK PRO FROM LATE 2020, I DON'T KNOW
+      HOW WELL MY DOTFILES ARE GONNA WORK ON OTHER MACHINES.
+     
+   </tr>
+   </table>
+   
+## 🏜️ The themes
+### 🕹️Pacman:
+|<img src="assets/pacman_rice.png”  align="center" width="600px">|<img src="assets/pacman_rice_used.png” align="center" width="600px">|
+|---|---|
+
+### 🎤 DT’s Xmonad:
+|<img src="assets/dt-xmonad_rice.png”  align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png” align="center" width="600px">|
+|---|---|
+
+## 📦 Setup
 ### Install dependencies
-- Install yabai ```brew install koekeishiya/formulae/yabai```
-- Install jq ```brew install jq```
-- Install skhd ```brew install koekeishiya/formulae/skhd```
-- Install alacritty ```brew install alacritty```
-- Install sketchybar ```brew tap FelixKratz/formulae; brew install sketchybar```
-- Install oh-my-zsh (zsh extention manager) using the instructions [here](https://ohmyz.sh/#install) (just run the command there)
-- Install tmux **(NOT IN THE SCREENSHOT, NOT NECESERY)** ```brew install tmux```
+```
+# programs
+brew tap FelixKratz/formulae
+brew install sketchybar
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
+brew install alacritty
+brew install jq
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew instal tmux
+brew install cava
 
-# Fonts
-To install the following fonts with homebrew, run this command: ```brew tap homebrew/cask-fonts```
-- Ubuntu Font ```brew install font-ubuntu```
-- FontAwesome ```brew install font-fontawesome```
-- Hack Nerd Font ```brew install font-hack-nerd-font```
-- FiraCode Nerd Font ```brew install font-fira-code-nerd-font```
+# fonts
+brew tap homebrew/cask-fonts
+brew install font-ubuntu
+brew install font-fontawesome
+brew install font-hack-nerd-font
+brew install font-fira-code-nerd-font
+```
+There are 2 fonts that need to be installed manually, Install them using the following instructions:
+- Clone the repository ```git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles```
+- Go to misc/fonts and double click on the files to install them
 
-### (Not necessary) Install apps i used in the screenshot
-- Music visualizer - cava. Install with ```brew install cava```
+### Move files (By default for pacman setup)
+```
+# theme spacific
+cd ~/Dotfiles
+mv -r config/Pacman/sketchybar ~/.config/sketchybar
+mv -r config/Pacman/yabai ~/.config/yabai
+mv -r config/Pacman/skhd ~/.config/skhd
+mv -r config/Pacman/alacritty ~/.config/alacritty
+mv -r config/Pacman/cava ~/.config/cava
 
-### Clone this repository
-Clone this repo with the following command. <br>
-```git clone https://github.com/itaysharir/Dotfiles.git```
+# not theme spacific
+mv -r misc/nvim ~/.config/nvim
+mv misc/zsh/.zshrc ~/.zshrc
+mv misc/starship/starship.toml ~/.config/starship.toml
+mv misc/tmux/.tmux.conf ~/.tmux.conf
+```
 
-### Move files
-- move sketchybar to ~/.config/sketchybar ```mv -r sketchybar ~/.config/sketchybar``` <br> 
-- Move alacritty to ~/.config/alacritty ```mv -r alacritty ~/.config/alacritty``` <br>
-- Move yabai to ~/.config/yabai ```mv -r yabai ~/.config/yabai``` <br>
-- Move skhd to ~/.config/skhd ```mv -r skhd ~/.config/skhd``` <br>
-- Move cava to ~/.config/cava ```mv -r cava ~/.config/cava```
-- Move .zshrc to ~/.zshrc ```mv .zshrc ~/.zshrc```
-- Move .tmux.conf to ~/.tmux.conf ```mv .tmux.conf ~/.tmux.conf```
+### Start services
+```
+brew sevices start yabai
+brew sevices start skhd
+brew sevices start sketchybar
+```
 
-## That's it.
-- Feel free to customize my dotfiles to your liking and to submit issues.
-
-## Credits
-- Thanks for [distrotube on yt](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg) for the bar design, i remade his bar from scratch. <br>
-- Also thanks for [archcraft](https://archcraft.io/) developers for the alacritty config, i took it from there.
+## 😁 Credits
+- Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
+- [gh0stzk](https://github.com/gh0stzk/dotfiles) I also took HUGE inspotations from your Emilia theme for my "Pacman" theme. I also completly ripped off your README.md design
