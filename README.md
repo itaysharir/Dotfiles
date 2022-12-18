@@ -64,10 +64,19 @@ brew install font-ubuntu
 brew install font-fontawesome
 brew install font-hack-nerd-font
 brew install font-fira-code-nerd-font
+
+# fonts that aren't avalible in brew
+echo "The script is going to install fonts that aren't avalible in homebrew, a popup is goins to open and you'll need to click install."
+sleep 1
+
+git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles
+cd misc/fonts
+open Pacman-Dots.ttf
+echo " "
+echo "__________"
+echo " "
+echo "Click install on the prompt that opened up"
 ```
-There are 2 fonts that need to be installed manually, Install them using the following instructions:
-- Clone the repository ```git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles```
-- Go to misc/fonts and double click on the files to install them
 
 ### Move files (By default for pacman setup)
 ```
