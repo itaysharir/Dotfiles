@@ -18,6 +18,7 @@ skhd - /Users/$(whoami)/.config/skhd/skhdrc \\
 yabai - /Users/$(whoami)/.config/yabai/yabairc \\
 starship - /Users/$(whoami)/.config/starship.toml \\
 tmux - /Users/$(whoami)/.tmux.conf \\
+dmenuscripts - /Users/$(whoami)/.config/dmenu-scripts/config.sh \\
 zsh - /Users/$(whoami)/.zshrc \
 "\
 | sed 's/\\//' | ${DMENU} "Edit config:") # pipe configs into dmenu
