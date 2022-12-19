@@ -82,14 +82,14 @@ echo "Click install on the prompt that opened up"
 ```
 # theme spacific
 cd ~/Dotfiles
-mv -r config/Pacman/sketchybar ~/.config/sketchybar
-mv -r config/Pacman/yabai ~/.config/yabai
-mv -r config/Pacman/skhd ~/.config/skhd
-mv -r config/Pacman/alacritty ~/.config/alacritty
-mv -r config/Pacman/cava ~/.config/cava
+mv -r config/rices/Pacman/sketchybar ~/.config/sketchybar
+mv -r config/rices/Pacman/yabai ~/.config/yabai
+mv -r config/rices/Pacman/skhd ~/.config/skhd
+mv -r config/rices/Pacman/alacritty ~/.config/alacritty
+mv -r config/rices/Pacman/nvim ~/.config/nvim
+mv -r config/rices/Pacman/cava ~/.config/cava
 
 # not theme spacific
-mv -r misc/nvim ~/.config/nvim
 mv misc/zsh/.zshrc ~/.zshrc
 mv misc/starship/starship.toml ~/.config/starship.toml
 mv misc/tmux/.tmux.conf ~/.tmux.conf
