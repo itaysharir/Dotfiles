@@ -66,9 +66,10 @@ brew install font-hack-nerd-font
 brew install font-fira-code-nerd-font
 
 # fonts that aren't avalible in brew
+echo ""
 echo "The script is going to install fonts that aren't avalible in homebrew, a popup is goins to open and you'll need to click install."
-sleep 1
-
+sleep 3
+echo "__________"
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles
 cd misc/fonts
 open Pacman-Dots.ttf
