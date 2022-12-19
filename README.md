@@ -49,6 +49,7 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 ```
 # programs
 brew tap FelixKratz/formulae
+brew tap FelixKratz/formulae
 brew install sketchybar
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
@@ -101,6 +102,43 @@ mv misc/tmux/.tmux.conf ~/.tmux.conf
 brew sevices start yabai
 brew sevices start skhd
 brew sevices start sketchybar
+```
+## 🗳️ Setup - Dmenu
+### Install dependencies
+- Install macports (the following command is for macos ventura, install manually for other versions)
+```
+if ! command -v port &> /dev/null
+then
+   brew install wget
+   wget https://github.com/macports/macports-base/releases/download/v2.8.0/MacPorts-2.8.0-13-Ventura.pkg
+   open MacPorts-2.8.0-13-Ventura.pkg
+   echo "_________"
+   echo ""
+   echo "Follow the instructions on-screen to install macports"
+else
+   echo "macports is already installed, you're set."
+fi
+```
+- Install dependencies for dmenu (on mac) with macports (This procces is going to take some time, **DO NOT** cancel the installation in the middle)
+```
+sudo port install dmenu
+sudo port uninstall dmenu
+# installing and then uninstalling right away might seem pointless, but this way all dependencies are installed.
+```
+### Install my build of dmenu
+- First of all, make sure you cloned this repo to ~/Dotfiles and it is the working directory in the terminal. If you've followed the previous instructions, your'e good. If you didn't, run the following:
+```
+git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles
+cd Dotfiles
+```
+- cd into dmenu/dmenu-4.9 ```cd ~/Dotfiles/dmenu/dmenu-4.9```
+- Build dmenu by running ```sudo make install```
+- Reboot
+- Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. If you didn't follow the instructions from "Setup - Themes", run the following:
+```
+cd ~/Dotfiles/
+mv -r config/rices/Pacman/skhd ~/.config/skhd
+brew services start skhd
 ```
 
 ## 😁 Credits
