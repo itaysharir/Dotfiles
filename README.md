@@ -74,7 +74,6 @@ echo "__________"
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles
 cd misc/fonts
 open Pacman-Dots.ttf
-echo " "
 echo "__________"
 echo " "
 echo "Click install on the prompt that opened up"
