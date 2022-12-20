@@ -56,8 +56,8 @@ brew install koekeishiya/formulae/skhd
 brew install alacritty
 brew install jq
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-brew instal tmux
 brew install cava
+brew install starship
 
 # fonts
 brew tap homebrew/cask-fonts
@@ -94,7 +94,6 @@ mv -r config/rices/Pacman/cava ~/.config/cava
 # not theme spacific
 mv misc/zsh/.zshrc ~/.zshrc
 mv misc/starship/starship.toml ~/.config/starship.toml
-mv misc/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 ### Start services
