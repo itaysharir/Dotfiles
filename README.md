@@ -122,6 +122,7 @@ fi
 ```
 sudo port install dmenu
 sudo port uninstall dmenu
+sudo port install sxiv
 # installing and then uninstalling right away might seem pointless, but this way all dependencies are installed.
 ```
 ### Install my build of dmenu
