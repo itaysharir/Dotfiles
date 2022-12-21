@@ -84,16 +84,16 @@ echo "Click install on the prompt that opened up"
 ```
 # theme spacific
 cd ~/Dotfiles
-mv -r config/rices/Pacman/sketchybar ~/.config/sketchybar
-mv -r config/rices/Pacman/yabai ~/.config/yabai
-mv -r config/rices/Pacman/skhd ~/.config/skhd
-mv -r config/rices/Pacman/alacritty ~/.config/alacritty
-mv -r config/rices/Pacman/nvim ~/.config/nvim
-mv -r config/rices/Pacman/cava ~/.config/cava
+cp -r config/rices/Pacman/sketchybar ~/.config/sketchybar
+cp -r config/rices/Pacman/yabai ~/.config/yabai
+cp -r config/rices/Pacman/skhd ~/.config/skhd
+cp -r config/rices/Pacman/alacritty ~/.config/alacritty
+cp -r config/rices/Pacman/nvim ~/.config/nvim
+cp -r config/rices/Pacman/cava ~/.config/cava
 
 # not theme spacific
-mv misc/zsh/.zshrc ~/.zshrc
-mv misc/starship/starship.toml ~/.config/starship.toml
+cp misc/zsh/.zshrc ~/.zshrc
+cp misc/starship/starship.toml ~/.config/starship.toml
 ```
 
 ### Start services
@@ -139,18 +139,12 @@ sudo pip3 install -e ./ # build
 brew install koekeishiya/formulae/skhd
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles
 cd Dotfiles
+cp -r config/rices/Pacman/skhd ~/.config/skhd
 ```
 - cd into dmenu/dmenu-4.9 ```cd ~/Dotfiles/dmenu/dmenu-4.9```
 - Build dmenu by running ```sudo make install```
 - Reboot
 - Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
-- If you didn't follow the instructions from "Setup - Themes", run the following:
-```
-brew install skhd
-cd ~/Dotfiles/
-mv -r config/rices/Pacman/skhd ~/.config/skhd
-brew services start skhd
-```
 
 ## 😁 Credits
 - Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
