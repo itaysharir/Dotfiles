@@ -49,7 +49,6 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 ```
 # programs
 brew tap FelixKratz/formulae
-brew tap FelixKratz/formulae
 brew install sketchybar
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
@@ -126,6 +125,7 @@ sudo port uninstall dmenu
 ### Install my build of dmenu
 - First of all, make sure you cloned this repo to ~/Dotfiles and it is the working directory in the terminal. If you've followed the previous instructions, your'e good. If you didn't, run the following:
 ```
+brew install koekeishiya/formulae/skhd
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles
 cd Dotfiles
 ```
@@ -135,6 +135,7 @@ cd Dotfiles
 - Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
 - If you didn't follow the instructions from "Setup - Themes", run the following:
 ```
+brew install skhd
 cd ~/Dotfiles/
 mv -r config/rices/Pacman/skhd ~/.config/skhd
 brew services start skhd
