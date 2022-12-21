@@ -4,7 +4,7 @@ sketchybar --add item sound right                                               
                        icon.padding_right=4                                        \
                        icon.color=0xff6c77bb                                       \
                        icon.y_offset=1                                              \
-                       label.font="$FONT:Regular:14.5"                                \
+                       label.font="$FONT:Medium:14.5"                                \
                        label.color=0xffdfe1ea                                      \
                        label.padding_right=8                                       \
                        background.color=0xff252731                                 \

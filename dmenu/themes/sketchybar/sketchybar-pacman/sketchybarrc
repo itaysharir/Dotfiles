@@ -28,7 +28,7 @@ sketchybar --bar     height=50                                                  
                      color=0xff1a1c26                                              \
                      topmost=off                                                   \
                      sticky=on                                                     \
-                     font_smoothing=off                                            \
+                     font_smoothing=off                                             \
                      y_offset=8                                                    \
                      notch_width=0                                                 \
                                                                                    \

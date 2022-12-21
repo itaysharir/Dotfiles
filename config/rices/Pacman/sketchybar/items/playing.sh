@@ -6,7 +6,7 @@ sketchybar --add item line right                                                
            --add item playing right                                                \
            --set playing update_freq=5                                             \
                        icon.color=0xff9fd06a                                       \
-                       label.font="$FONT:Regular:14.7"                                \
+                       label.font="$FONT:Medium:14.7"                                \
                        label.padding_right=5                                    \
                        label.color=0xffffffff                                      \
                        script="$PLUGIN_DIR/playing.sh"                                 \

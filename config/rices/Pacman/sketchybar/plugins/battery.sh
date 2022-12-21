@@ -3,7 +3,7 @@ BATT_PERCENT=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
 if [[ $CHARGING != "" ]]; then
   sketchybar -m --set battery           \
     icon=""                           \
-    label="${BATT_PERCENT}%"
+    label="${BATT_PERCENT}"
   exit 0
 fi
 case ${BATT_PERCENT} in
@@ -21,5 +21,5 @@ case ${BATT_PERCENT} in
 esac
 sketchybar -m --set battery             \
   icon="$ICON"                          \
-  label="${BATT_PERCENT}%" \
+  label="${BATT_PERCENT}" \
   label.color="$COLOR"                    \
