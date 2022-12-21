@@ -51,7 +51,7 @@ sketchybar --bar     height=50                                                  
 
 ### Right ###
 . "$ITEM_DIR/time.sh"      # time
-. "$ITEM_DIR/updates.sh"   # updates
+# . "$ITEM_DIR/updates.sh"   # updates
 . "$ITEM_DIR/sound.sh"     # sound
 . "$ITEM_DIR/battery.sh"   # battery
 . "$ITEM_DIR/playing.sh"   # playing on spotify

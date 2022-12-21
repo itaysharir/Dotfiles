@@ -17,7 +17,7 @@ case ${BATT_PERCENT} in
     3[0-9]) ICON=""; COLOR="0xfffbc62d" ;;
     2[0-9]) ICON=""; COLOR="0xfffbc62d" ;;
     1[0-9]) ICON=""; COLOR="0xfff65e51" ;;
-    *) ICON=""
+    *) ICON=""; COLOR="0xfff65e51"
 esac
 sketchybar -m --set battery             \
   icon="$ICON"                          \
