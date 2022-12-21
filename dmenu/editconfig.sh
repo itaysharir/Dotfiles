@@ -1,7 +1,8 @@
 #! /usr/bin/env sh
 
-# get config
+# get config(s)
 . ~/.config/dmenu-scripts/config.sh
+. ~/Dotfiles/dmenu/config-editor.sh
 
 # list configs
 choice=$(printf \

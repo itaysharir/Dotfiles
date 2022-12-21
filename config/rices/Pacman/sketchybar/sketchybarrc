@@ -18,9 +18,9 @@ PADDINGS=3  # All elements use this padidng (Wherever i didn't need it, I used n
 
 ### Setting up the general bar appearance and default values ###
 sketchybar --bar     height=50                                                     \
-                     corner_radius=14                                               \
+                     corner_radius=14                                              \
                      border_width=0                                                \
-                     margin=95                                                      \
+                     margin=95                                                     \
                      blur_radius=0                                                 \
                      position=top                                                  \
                      padding_left=4                                                \
@@ -28,7 +28,7 @@ sketchybar --bar     height=50                                                  
                      color=0xff1a1c26                                              \
                      topmost=off                                                   \
                      sticky=on                                                     \
-                     font_smoothing=off                                             \
+                     font_smoothing=off                                            \
                      y_offset=8                                                    \
                      notch_width=0                                                 \
                                                                                    \
@@ -45,6 +45,7 @@ sketchybar --bar     height=50                                                  
 . "$ITEM_DIR/arch_menu.sh" # arch logo
 . "$ITEM_DIR/system.sh"    # resources monitor
 . "$ITEM_DIR/spotify.sh"   # spotify widget
+# . "$ITEM_DIR/clipboard.sh"   # spotify widget
 
 ### Center ###
 . "$ITEM_DIR/spaces.sh"    # workspaces
