@@ -11,7 +11,7 @@ ITEM_DIR="$HOME/.config/sketchybar/items"       # Directory where the items are 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"   # Directory where all the plugin scripts are stored
 
 ### Define defult font ###
-FONT="scientifica" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+FONT="Monocraft" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 
 ### Padding ###
 PADDINGS=3  # All elements use this padidng (Wherever i didn't need it, I used negetive padding)

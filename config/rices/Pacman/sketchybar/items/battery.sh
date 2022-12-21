@@ -4,7 +4,7 @@ sketchybar --add item battery right                                             
                        icon.padding_right=4                                        \
                        icon.color=0xff9ac868                                       \
                        icon.y_offset=1                                              \
-                       label.font="$FONT:Medium:14.5"                                \
+                       label.font="$FONT:Medium:12.0"                                \
                        label.color=0xffdfe1ea                                      \
                        label.padding_right=8                                       \
                        background.color=0xff252731                                 \
