@@ -122,8 +122,16 @@ fi
 ```
 sudo port install dmenu
 sudo port uninstall dmenu
-sudo port install sxiv
 # installing and then uninstalling right away might seem pointless, but this way all dependencies are installed.
+```
+
+- Install dependencies for the wallpaper script
+```
+sudo port install sxiv # image viewer
+# pywal fork
+sudo pip3 uninstall pywal; sudo rm $(which wal) # if pywal is installed, remove it
+git clone https://github.com/robwaz/pywal && cd pywal
+sudo pip3 install -e ./ # build
 ```
 ### Install my build of dmenu
 - First of all, make sure you cloned this repo to ~/Dotfiles and it is the working directory in the terminal. If you've followed the previous instructions, your'e good. If you didn't, run the following:
