@@ -132,7 +132,8 @@ cd Dotfiles
 - cd into dmenu/dmenu-4.9 ```cd ~/Dotfiles/dmenu/dmenu-4.9```
 - Build dmenu by running ```sudo make install```
 - Reboot
-- Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. If you didn't follow the instructions from "Setup - Themes", run the following:
+- Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
+- If you didn't follow the instructions from "Setup - Themes", run the following:
 ```
 cd ~/Dotfiles/
 mv -r config/rices/Pacman/skhd ~/.config/skhd
