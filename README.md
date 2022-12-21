@@ -64,6 +64,7 @@ brew install font-ubuntu
 brew install font-fontawesome
 brew install font-hack-nerd-font
 brew install font-fira-code-nerd-font
+brew install --cask font-monocraft
 
 # fonts that aren't avalible in brew
 echo ""
