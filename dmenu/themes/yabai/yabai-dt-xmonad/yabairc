@@ -7,7 +7,7 @@
 
 ### Variables ###
 # Note: These variables are menat to by easily changed by anyone.
-export external_bar_height="24"         # Height of external bar in pt                                    (usage: 24/16/any number)
+export external_bar_height="30"         # Height of external bar in pt                                    (usage: 24/16/any number)
 export external_bar_position="top"      # position of external bar                                        (usage: top/bottom/left/right)
 export shadow_toggle="off"              # Determines wether window shadows are on                         (usage: on/off)
 export mouse_mod="cmd"                  # key that when pressed, mouse can be used to move and resize     (usage: cmd/alt/ctrl/shift)
