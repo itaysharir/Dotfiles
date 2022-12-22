@@ -94,11 +94,9 @@ cp -r config/rices/Pacman/nvim ~/.config/nvim
 cp -r config/rices/Pacman/cava ~/.config/cava
 
 # not theme spacific
-mkdir ~/.config/dmenu-scripts
-cp dmenu/config.sh ~/.config/dmenu-scripts/config.sh
-
-cp misc/zsh/.zshrc ~/.zshrc
-cp misc/starship/starship.toml ~/.config/starship.toml
+cp -r config/dmenu-scripts ~/.config/dmenu-scripts
+cp config/zsh/.zshrc ~/.zshrc
+cp config/starship/starship.toml ~/.config/starship.toml
 ```
 
 ### Start services
