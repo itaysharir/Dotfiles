@@ -43,5 +43,8 @@ else # if choice is not empty, do the following:
 
     # set wallpaper
     wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
-    wal -i $wall # set the wallpaper saved in the "wall" variable
+    timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
+
+    # add back proper borders yabai
+    /opt/homebrew/bin/yabai -m config window_shadow off
 fi
