@@ -151,7 +151,7 @@ sudo make install
 brew services restart skhd
 ```
 - Reboot
-- Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
+- Now dmenu and the scripts are installed. If you've followed all above instructions, you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
 
 ## 😁 Credits
 - Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
