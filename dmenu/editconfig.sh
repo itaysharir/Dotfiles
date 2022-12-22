@@ -2,7 +2,7 @@
 
 # get config(s)
 . ~/.config/dmenu-scripts/config.sh
-. ~/Dotfiles/dmenu/config-editor.sh
+. "${FOLDER}/config-editor.sh"
 
 # list configs
 choice=$(printf \

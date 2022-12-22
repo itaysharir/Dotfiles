@@ -15,6 +15,9 @@ if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
 
+    # move sketchybar up
+    sketchybar --animate sin 30 --bar y_offset=-100
+
     # remove current configs
     rm -r ~/.config/sketchybar  # sketchybar
     rm -r ~/.config/nvim/       # nvim
@@ -27,9 +30,10 @@ else # if choice is not empty, do the following:
     cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
     cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
 
-    # make sketchybar and yabai use the new config without restarting
-    . ~/.config/yabai/yabairc
+    # apply new yabai config
+    . ~/.config/yabai/yabairc # apply new config
 
+    # make sketchybar use the new config without restarting
     sketchybar --remove '/.*/'
     ~/.config/sketchybar/sketchybarrc
 
@@ -37,6 +41,6 @@ else # if choice is not empty, do the following:
     echo $choice > ~/dmenu\ scripts/themes/current
 
     # set wallpaper
-    export wall=$(cat ~/dmenu\ scripts/themes/wallpapers/$choice) # see what is the applied wallpaper for the selected theme and save it in a variable
+    wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
     wal -i $wall # set the wallpaper saved in the "wall" variable
 fi

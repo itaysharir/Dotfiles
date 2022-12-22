@@ -53,7 +53,7 @@ sketchybar --bar     height=24                                                  
                      background.padding_right=$PADDINGS                            \
                      background.padding_left=$PADDINGS                             \
 
-sketchybar --animate sin 30 --bar y_offset=-100 y_offset=9
+sketchybar --animate sin 30 --bar y_offset=-100 y_offset=0
 
 ### Template for some elements ###
 sketchybar --add item           label_template left                                \
@@ -63,8 +63,6 @@ sketchybar --add item           label_template left                             
                                 click_script="$PLUGIN_DIR/toggle_bracket.sh"       \
                                 background.padding_left=$SEGMENT_SPACING           \
                                 drawing=off                                        \
-### Animations ###
-sketchybar --animate sin 30 --bar y_offset=-100 y_offset=9
 
 ### Spaces themselves are this ###
 . "$ITEM_DIR/spaces.sh"
