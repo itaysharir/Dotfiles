@@ -144,8 +144,12 @@ git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles
 cd Dotfiles
 cp -r config/rices/Pacman/skhd ~/.config/skhd
 ```
-- cd into dmenu/dmenu-4.9 ```cd ~/Dotfiles/dmenu/dmenu-4.9```
-- Build dmenu by running ```sudo make install```
+- Now cd into dmenu/dmenu-4.9 and compile
+```
+cd dmenu/dmenu-4.9
+sudo make install
+brew services restart skhd
+```
 - Reboot
 - Now dmenu and the scripts are installed. If you've followed all above instructions (from "Setup - Themes" AND "Setup - Dmenu"), you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
 
