@@ -30,8 +30,9 @@ else # if choice is not empty, do the following:
     cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
     cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
 
-    # apply new yabai config
-    . ~/.config/yabai/yabairc # apply new config
+    # apply new yabai config (without settings layout)
+    yabai_no_layout=$(sed -n '/bsp/!p' ~/.config/yabai/yabairc) # store yabai config but without layout in a varible
+    sh -c "$yabai_no_layout" # run everything in the variable
 
     # make sketchybar use the new config without restarting
     sketchybar --remove '/.*/'
