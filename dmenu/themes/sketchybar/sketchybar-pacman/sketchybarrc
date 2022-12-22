@@ -14,7 +14,7 @@ FONT="Monocraft" # Needs to have Regular, Bold, Semibold, Heavy and Black varian
 
 ### Padding ###
 PADDINGS=3  # All elements use this padidng
-
+###
 ### Setting up the general bar appearance and default values ###
 sketchybar --bar     height=50                                                     \
                      corner_radius=14                                              \
@@ -28,7 +28,7 @@ sketchybar --bar     height=50                                                  
                      topmost=off                                                   \
                      sticky=on                                                     \
                      font_smoothing=off                                            \
-                     y_offset=8                                                    \
+                     y_offset=-100                                                    \
                      notch_width=0                                                 \
                                                                                    \
            --default drawing=on                                                    \
@@ -39,6 +39,8 @@ sketchybar --bar     height=50                                                  
                      label.padding_right=$PADDINGS                                 \
                      background.padding_right=$PADDINGS                            \
                      background.padding_left=$PADDINGS                             \
+
+sketchybar --animate sin 30 --bar y_offset=-100 y_offset=9
 
 ### Left ###
 . "$ITEM_DIR/arch_menu.sh" # arch logo

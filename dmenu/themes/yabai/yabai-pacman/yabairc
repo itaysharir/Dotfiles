@@ -16,7 +16,7 @@ export border_width="1"                 # Determines the width of the active win
 export border_radius="11"               # radius of the active window's border                            (usage: 11/0/any number)
 export opacity_toggle="off"             # Detriments wether opacity based focus is on                     (usage: on/off)
 export layout="bsp"                     # Layout of windows                                               (usage: bsp/float/stack)
-export gap_width="25"                   # width of window gaps                                            (usage: 17/8/any number)
+export gap_width="17"                   # width of window gaps                                            (usage: 17/8/any number)
 export animation_duration="0"           # Window animation duration                                       (usage: 0.0/0.3/0.5)
 export autoraise_toggle="on"            # turn autoraise on or off                                        (usage: on/off)
 
@@ -32,7 +32,7 @@ fi
 ### Toggles ###
 yabai -m config window_shadow $shadow_toggle                     # turn on/off window shadows (configured in variables)
 yabai -m config mouse_modifier $mouse_mod                        # make cmd the mouse modifier key (configued in variables)
-yabai -m config layout $layout                                   # set layout (configured in variables)
+# yabai -m config layout $layout                                   # set layout (configured in variables)
 yabai -m config window_animation_duration $animation_duration    # Set animation duration (configured in variables)
 yabai -m config window_border_radius $border_radius              # set border radius (configured in variables)
 
@@ -40,7 +40,7 @@ yabai -m config window_border_radius $border_radius              # set border ra
 yabai -m config window_opacity             $opacity_toggle      # Turn on/off opacity based focus (configured in variables)
 yabai -m config window_opacity_duration    0.2                  # Time it takes to fade between windows
 yabai -m config active_window_opacity      1.0                  # opacity for the focused window
-yabai -m config normal_window_opacity      0.8                  # opacity for other windows
+yabai -m config normal_window_opacity      0.9                  # opacity for other windows
 
 ### Confgure mouse usage ###
 yabai -m config mouse_action1              resize   # with left click - resize
@@ -53,20 +53,36 @@ yabai -m config active_window_border_color 0xFF6faec0   # Set border color for t
 yabai -m config normal_window_border_color 0xFF3e4050   # set border color for other windows
 
 ### Configure window gaps ###
-yabai -m config top_padding                $gap_width
-yabai -m config bottom_padding             $gap_width
-yabai -m config left_padding               $gap_width
-yabai -m config right_padding              $gap_width
-yabai -m config window_gap                 $gap_width
-
 if [[ $external_bar_position == "top" ]]; then
    yabai -m config top_padding                $(expr $gap_width + $external_bar_height)
-elif [[ $external_bar_position == "bottom" ]]; then
+   yabai -m config bottom_padding             $gap_width
+   yabai -m config left_padding               $gap_width
+   yabai -m config right_padding              $gap_width
+   yabai -m config window_gap                 $gap_width
+
+fi
+if [[ $external_bar_position == "bottom" ]]; then
+   yabai -m config top_padding                $gap_width
    yabai -m config bottom_padding             $(expr $gap_width + $external_bar_height)
-elif [[ $external_bar_position == "left" ]]; then
+   yabai -m config left_padding               $gap_width
+   yabai -m config right_padding              $gap_width
+   yabai -m config window_gap                 $gap_width
+
+fi
+if [[ $external_bar_position == "left" ]]; then
+   yabai -m config top_padding                $gap_width
+   yabai -m config bottom_padding             $gap_width
    yabai -m config left_padding               $(expr $gap_width + $external_bar_height)
-elif [[ $external_bar_position == "right" ]]; then
+   yabai -m config right_padding              $gap_width
+   yabai -m config window_gap                 $gap_width
+
+fi
+if [[ $external_bar_position == "right" ]]; then
+   yabai -m config top_padding                $gap_width
+   yabai -m config bottom_padding             $gap_width
+   yabai -m config left_padding              $gap_width
    yabai -m config right_padding              $(expr $gap_width + $external_bar_height)
+   yabai -m config window_gap                 $gap_width
 
 fi
 
@@ -75,18 +91,18 @@ yabai -m rule --add app="^(Calculator|System Preferences|zoom.us|Photo Booth|Arc
 yabai -m rule --add app="^(XQuartz)$" layer=above manage=off  # Don't tile xquartz (i use it for dmenu)
 
 ### Space labels ###
-yabai -m space 1 --label dev
-yabai -m space 2 --label www
-yabai -m space 3 --label sys
-yabai -m space 4 --label doc
-yabai -m space 5 --label vbox
-yabai -m space 6 --label chat
-yabai -m space 7 --label mus
-yabai -m space 8 --label vid
-yabai -m space 9 --label gfx
+yabai -m space 1 --label Code
+yabai -m space 2 --label Text
+yabai -m space 3 --label Web
+yabai -m space 4 --label Idle
+yabai -m space 5 --label Misc
+yabai -m space 6 --label doc
+yabai -m space 7 --label help
+yabai -m space 8 --label music
 
 ### Sketchybar ###
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"         # Notify sketchybar when space changes
 yabai -m signal --add event=window_title_changed action="sketchybar --trigger title_change"   # Notify sketchybar when the focused app changes
 
+### Notify when the yabai config finished loading ###
 echo "yabai configuration loaded.."

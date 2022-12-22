@@ -14,14 +14,6 @@ pacman\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
-    backup=$(printf "Yes\nNo" | ${DMENU} "Backup existing configs?") # ask me if i want to backup the current configs
-
-    if [ $backup == "Yes" ]; then # if i said yes, do the following:
-        mv ~/.config/sketchybar ~/.config/sketchybar.old # move sketchybar config to sketchybar.old
-        mv ~/.config/yabai ~/.config/yabai.old           # move yabai config to yabai.old
-        mv ~/.config/alacritty ~/.config/alacritty.old   # move alacritty config to alacritty.old
-        mv ~/.config/nvim ~/.config/nvim.old             # move nvim config to nvim.old
-    fi
 
     # remove current configs
     rm -r ~/.config/sketchybar  # sketchybar
@@ -30,14 +22,16 @@ else # if choice is not empty, do the following:
     rm -r ~/.config/yabai/      # yabai
 
     # move desired configs to ~/.config
-    cp -r ~/Dotfiles/dmenu/themes/sketchybar/sketchybar-$choice ~/.config/sketchybar    # sketchybar
-    cp -r ~/Dotfiles/dmenu/themes/yabai/yabai-$choice ~/.config/yabai                   # yabai
-    cp -r ~/Dotfiles/dmenu/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
-    cp -r ~/Dotfiles/dmenu/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
+    cp -r ${FOLDER}/themes/sketchybar/sketchybar-$choice ~/.config/sketchybar    # sketchybar
+    cp -r ${FOLDER}/themes/yabai/yabai-$choice ~/.config/yabai                   # yabai
+    cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
+    cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
 
-    # restart services
-    brew services restart sketchybar    # sketchybar
-    brew services restart yabai         # restart yabai
+    # make sketchybar and yabai use the new config without restarting
+    . ~/.config/yabai/yabairc
+
+    sketchybar --remove '/.*/'
+    ~/.config/sketchybar/sketchybarrc
 
     # write the theme's number to a text file for other scripts to use
     echo $choice > ~/dmenu\ scripts/themes/current
