@@ -46,6 +46,16 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 
 ## 📦 Setup
 ### Install dependencies
+- If you don't have brew installed, obviously install it
+```
+if ! command -v brew &> /dev/null
+then
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+   echo "brew is already installed, you're set."
+fi
+```
+- Install the rest of the dependencies
 ```
 # programs
 brew tap FelixKratz/formulae
