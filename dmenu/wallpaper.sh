@@ -12,14 +12,16 @@ choose () {
         exit
     fi
 
-    wal -i "${wall}"
+    timeout 1s wal -i "${wall}"
+    yabai -m config window_shadow off
     echo $(cat ~/.cache/wal/wal) >> ${FOLDER}/.wallpaper_history
 }
 
 # function for choosing a random wallpaper
 random () {
     export file=$(ls -R ~/wallpapers/ | shuf -n 1)
-    wal -i ~/wallpapers/$file
+    timeout 1s wal -i ~/wallpapers/$file
+    yabai -m config window_shadow off
     echo $(cat ~/.cache/wal/wal) >> ${FOLDER}/.wallpaper_history
 }
 
@@ -37,7 +39,8 @@ apply () {
 # a function to undo setting a wallpaper
 undo () {
     export lastwall=$(sed 'x;$!d' < ${FOLDER}/.wallpaper_history)
-    wal -i $lastwall
+    timeout 1s wal -i $lastwall
+    yabai -m config window_shadow off
 }
 
 # a function to confirm setting the wallpaper
