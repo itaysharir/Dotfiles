@@ -137,7 +137,7 @@ git clone https://github.com/robwaz/pywal && cd pywal
 sudo pip3 install -e ./ # build
 ```
 ### Install my build of dmenu
-- First of all, make sure you cloned this repo to ~/Dotfiles and it is the working directory in the terminal. If you've followed the previous instructions, your'e good. If you didn't, run the following:
+- If you didn't follow the instructions in "Setup - Themes", run the following:
 ```
 brew install koekeishiya/formulae/skhd
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles
