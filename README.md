@@ -153,6 +153,10 @@ brew services restart skhd
 - Reboot
 - Now dmenu and the scripts are installed. If you've followed all above instructions, you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
 
+## Troubleshooting
+If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc
+```mv ~/.xinitrc ~/.xinitrc.backup```
+
 ## 😁 Credits
 - Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
 - [gh0stzk](https://github.com/gh0stzk/dotfiles) I also took HUGE inspotations from your Emilia theme for my "Pacman" theme. I also completly ripped off your README.md design
