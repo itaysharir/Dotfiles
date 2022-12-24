@@ -14,8 +14,8 @@ pacman\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
-
     # move sketchybar up
+    sleep 1
     sketchybar --animate sin 30 --bar y_offset=-100
 
     # remove current configs
