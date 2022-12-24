@@ -7,12 +7,12 @@
 
 ### Variables ###
 # Note: These variables are menat to by easily changed by anyone.
-export external_bar_height="22"         # Height of external bar in pt                                    (usage: 24/16/any number)
+export external_bar_height="60"         # Height of external bar in pt                                    (usage: 24/16/any number)
 export external_bar_position="top"      # position of external bar                                        (usage: top/bottom/left/right)
 export shadow_toggle="off"              # Determines wether window shadows are on                         (usage: on/off)
 export mouse_mod="cmd"                  # key that when pressed, mouse can be used to move and resize     (usage: cmd/alt/ctrl/shift)
 export border_toggle="on"               # Determines wether borders for active windows are on             (usage: on/off)
-export border_width="2"                 # Determines the width of the active window's border              (usage: 2/5/any number)
+export border_width="1"                 # Determines the width of the active window's border              (usage: 2/5/any number)
 export border_radius="11"               # radius of the active window's border                            (usage: 11/0/any number)
 export opacity_toggle="off"             # Detriments wether opacity based focus is on                     (usage: on/off)
 export layout="bsp"                     # Layout of windows                                               (usage: bsp/float/stack)
@@ -53,36 +53,20 @@ yabai -m config active_window_border_color 0xFF6faec0   # Set border color for t
 yabai -m config normal_window_border_color 0xFF3e4050   # set border color for other windows
 
 ### Configure window gaps ###
+yabai -m config top_padding                $gap_width
+yabai -m config bottom_padding             $gap_width
+yabai -m config left_padding               $gap_width
+yabai -m config right_padding              $gap_width
+yabai -m config window_gap                 $gap_width
+
 if [[ $external_bar_position == "top" ]]; then
-   yabai -m config top_padding                $(expr $gap_width + $external_bar_height)
-   yabai -m config bottom_padding             $gap_width
-   yabai -m config left_padding               $gap_width
-   yabai -m config right_padding              $gap_width
-   yabai -m config window_gap                 $gap_width
-
-fi
-if [[ $external_bar_position == "bottom" ]]; then
-   yabai -m config top_padding                $gap_width
-   yabai -m config bottom_padding             $(expr $gap_width + $external_bar_height)
-   yabai -m config left_padding               $gap_width
-   yabai -m config right_padding              $gap_width
-   yabai -m config window_gap                 $gap_width
-
-fi
-if [[ $external_bar_position == "left" ]]; then
-   yabai -m config top_padding                $gap_width
-   yabai -m config bottom_padding             $gap_width
-   yabai -m config left_padding               $(expr $gap_width + $external_bar_height)
-   yabai -m config right_padding              $gap_width
-   yabai -m config window_gap                 $gap_width
-
-fi
-if [[ $external_bar_position == "right" ]]; then
-   yabai -m config top_padding                $gap_width
-   yabai -m config bottom_padding             $gap_width
-   yabai -m config left_padding              $gap_width
-   yabai -m config right_padding              $(expr $gap_width + $external_bar_height)
-   yabai -m config window_gap                 $gap_width
+   yabai -m config top_padding $(expr $gap_width + $external_bar_height)
+elif [[ $external_bar_position == "bottom" ]]; then
+   yabai -m config bottom_padding $(expr $gap_width + $external_bar_height)
+elif [[ $external_bar_position == "left" ]]; then
+   yabai -m config left_padding $(expr $gap_width + $external_bar_height)
+elif [[ $external_bar_position == "right" ]]; then
+   yabai -m config right_padding $(expr $gap_width + $external_bar_height)
 
 fi
 

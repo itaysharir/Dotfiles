@@ -8,6 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/vim-color-forest-night'
 Plug 'navarasu/onedark.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Enhancements
 Plug 'junegunn/goyo.vim'
@@ -101,4 +102,4 @@ autocmd VimEnter * Goyo
 source ~/.config/nvim/statusline.vim
 source ~/.config/nvim/coc-config.vim
 
-colorscheme onedark
+colorscheme tokyonight-night
