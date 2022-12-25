@@ -96,6 +96,7 @@ cp -r config/rices/Pacman/cava ~/.config/cava
 # not theme spacific
 cp -r config/dmenu-scripts ~/.config/dmenu-scripts
 cp config/zsh/.zshrc ~/.zshrc
+cp -r config/zsh/.zsh ~/.zsh
 cp config/starship/starship.toml ~/.config/starship.toml
 ```
 
