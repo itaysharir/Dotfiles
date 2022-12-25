@@ -10,21 +10,21 @@ font:
 
   # Bold font face
   bold:
-    family: "Hack Nerd Font"
+    family: "FiraCode Nerd Font"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "Hack Nerd Font"
+    family: "FiraCode Nerd Font"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Hack Nerd Font"
+    family: "FiraCode Nerd Font"
     #style: Bold Italic
 
   # Point size
-  size: 13.5
+  size: 13.8
 
   # Offset
   #offset:
