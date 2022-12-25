@@ -126,19 +126,6 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
-alias newtag='git tag -a'
-publish () {
-    cd ~/websites.github.io
-    git add .
-    git commit -m $1
-    git push
-}
-publishStyle () {
-    cd ~/chatapp
-    git add index.html style.css assets login-style.css login.html new-chat.html new-chat-style.css
-    git commit -m $1
-    git push
-}
 
 # source .zshrc
 alias src='source ~/.zshrc' # apply changes made in .zshrc without closing zsh
@@ -197,6 +184,6 @@ ex () {
 
 ### startup ###
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
