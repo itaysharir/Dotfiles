@@ -5,22 +5,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "FiraCode Nerd Font"
+    family: "Hack Nerd Font"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "FiraCode Nerd Font"
+    family: "Hack Nerd Font"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "FiraCode Nerd Font"
+    family: "Hack Nerd Font"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "FiraCode Nerd Font"
+    family: "Hack Nerd Font"
     #style: Bold Italic
 
   # Point size
