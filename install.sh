@@ -52,8 +52,10 @@ step "Installing dependencies/apps/sketchybar if not already installed"
 brew tap FelixKratz/formulae
 install sketchybar
 
-step "Installing dependencies/apps/yabai if not already installed"
+step "Tapping koekeishiya repo"
 brew tap koekeishiya/formulae
+
+step "Installing dependencies/apps/yabai if not already installed"
 install yabai
 
 step "Installing dependencies/apps/skhd if not already installed"
