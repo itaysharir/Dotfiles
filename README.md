@@ -45,6 +45,7 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 |---|---|
 
 ## 🎯 Setup
+To install my Dotfiles, i made an easy install script. To use it, run the following command. <br>
 ```curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh | sh```
 
 ## 📦 Manual Setup - Themes
