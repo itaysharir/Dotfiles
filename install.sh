@@ -29,17 +29,6 @@ else
    echo "brew is already installed, you're set."
 fi
 
-step "Installing dialog"
-if ! command -v brew &> /dev/null
-then
-   step "It's not, installing"
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
-   eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-   echo "brew is already installed, you're set."
-fi
-
 install () {
     if ! command -v "$@" &> /dev/null; then
        brew install "$@"
@@ -47,6 +36,9 @@ install () {
        echo "'$@' is already installed, you're set."
     fi
 }
+
+step "Installing dialog"
+install dialog
 
 step "Installing dependencies/apps/sketchybar if not already installed"
 brew tap FelixKratz/formulae
