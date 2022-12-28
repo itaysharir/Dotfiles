@@ -100,7 +100,7 @@ cp misc/fonts/Pacman-Dots.ttf ~/Library/Fonts/Pacman-Dots.ttf
 step "Moving everything to the right place"
 configs_home=("sketchybar" "yabai" "skhd" "alacritty" "cava" "dmenu-scripts")
 for i in "${!configs_home[@]}"; do
-  cp -r config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
+  cp -r ~/Dotfiles/config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
   echo "Moved ${configs_home[i]}"
 done
 cp config/zsh/.zshrc ~/.zshrc
