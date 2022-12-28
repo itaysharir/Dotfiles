@@ -18,14 +18,14 @@ sketchybar --add   space          space_template center                \
                                   ignore_association=on              \
                                   icon.padding_left=10               \
                                   icon.padding_right=55               \
-                                  background.padding_right=-22              \
-                                  background.padding_left=-23              \
+                                  background.padding_right=-24              \
+                                  background.padding_left=-24              \
                                                                      \
            --clone spaces_1.idle  space_template                     \
            --set   spaces_1.idle  associated_space=1                 \
                                   icon=⬤                            \
                                   script="$PLUGIN_DIR/space.sh"      \
-                                  icon.padding_left=4               \
+                                  icon.padding_left=3               \
                                                                      \
            --clone spaces_1.misc  space_template                     \
            --set   spaces_1.misc  associated_space=2                 \
@@ -52,7 +52,7 @@ sketchybar --add   space          space_template center                \
            --set   spaces_2.nine  associated_space=6                 \
                                   icon=⬤                          \
                                   script="$PLUGIN_DIR/space.sh"      \
-                                  icon.padding_right=30               \
+                                  icon.padding_right=0               \
                                                                      \
            --add   bracket        spaces_1                           \
                                   spaces_1.label                     \
