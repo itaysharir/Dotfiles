@@ -150,3 +150,13 @@ brew services start yabai
 brew services start skhd
 
 step "That's It!"
+
+read -p "Do you wish to reboot for dmenu to work (y/n) " yn
+case $yn in
+	[yY] )
+        sudo reboot
+		;;
+	[nN] ) echo "Make sure to reboot later for dmenu to work";
+		;;
+	* ) echo invalid response;;
+esac
