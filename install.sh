@@ -18,11 +18,10 @@ step () {
     echo "\n"
 }
 
-step "Checking if brew is installed"
+step "Installing brew if not already installed"
 
 if ! command -v brew &> /dev/null
 then
-   step "It's not, installing"
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(whoami)/.zprofile
    eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -119,9 +118,8 @@ step "Installing dmenu (??)"
 read -p "Do you wish to install dmenu? (This is going to take a while) (y/n) " yn
 case $yn in
 	[yY] )
-        step "Checking if macports is installed"
+        step "Installing macports if not already installed"
          if ! command -v port &> /dev/null; then
-            step "It's not, installing"
             brew install wget
             wget https://github.com/macports/macports-base/releases/download/v2.8.0/MacPorts-2.8.0-13-Ventura.pkg
             open MacPorts-2.8.0-13-Ventura.pkg
