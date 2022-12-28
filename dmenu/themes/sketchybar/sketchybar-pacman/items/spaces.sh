@@ -18,7 +18,8 @@ sketchybar --add   space          space_template center                \
                                   ignore_association=on              \
                                   icon.padding_left=10               \
                                   icon.padding_right=55               \
-                                  background.padding_left=-50              \
+                                  background.padding_right=-22              \
+                                  background.padding_left=-23              \
                                                                      \
            --clone spaces_1.idle  space_template                     \
            --set   spaces_1.idle  associated_space=1                 \
