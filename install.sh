@@ -53,10 +53,11 @@ brew tap FelixKratz/formulae
 install sketchybar
 
 step "Installing dependencies/apps/yabai if not already installed"
-install koekeishiya/formulae/yabai
+brew tap koekeishiya/formulae
+install yabai
 
 step "Installing dependencies/apps/skhd if not already installed"
-install koekeishiya/formulae/skhd
+install skhd
 
 step "Installing dependencies/apps/alacritty if not already installed"
 install alacritty
@@ -107,7 +108,6 @@ cp -r config/rices/Pacman/yabai ~/.config/yabai
 cp -r config/rices/Pacman/skhd ~/.config/skhd
 cp -r config/rices/Pacman/alacritty ~/.config/alacritty
 cp -r config/rices/Pacman/cava ~/.config/cava
-
 # not theme spacific
 cp -r config/dmenu-scripts ~/.config/dmenu-scripts
 cp config/zsh/.zshrc ~/.zshrc
