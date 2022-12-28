@@ -18,9 +18,6 @@ step () {
     echo "\n"
 }
 
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-
 step "Checking if brew is installed"
 
 if ! command -v brew &> /dev/null
