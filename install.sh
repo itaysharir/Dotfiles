@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#! //bin/sh
 
 step () {
     final=$(echo "$@")
@@ -100,8 +100,9 @@ cp misc/fonts/Pacman-Dots.ttf ~/Library/Fonts/Pacman-Dots.ttf
 step "Moving everything to the right place"
 configs_home=("sketchybar" "yabai" "skhd" "alacritty" "cava" "dmenu-scripts")
 for i in "${!configs_home[@]}"; do
-  cp -r ~/Dotfiles/config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
-  echo "Moved ${configs_home[i]}"
+    cd ~/Dotfiles
+    cp -r ~/Dotfiles/config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
+    echo "Moved ${configs_home[i]}"
 done
 cp config/zsh/.zshrc ~/.zshrc
 cp -r config/zsh/.zsh ~/.zsh
