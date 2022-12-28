@@ -16,8 +16,8 @@ sketchybar --add   space          space_template center                \
                                   background.height=33               \
                                   click_script="$SPACE_CLICK_SCRIPT" \
                                   ignore_association=on              \
-                                  icon.padding_left=10               \
-                                  icon.padding_right=55               \
+                                  icon.padding_left=0               \
+                                  icon.padding_right=64               \
                                   background.padding_right=-24              \
                                   background.padding_left=-24              \
                                                                      \
@@ -25,7 +25,7 @@ sketchybar --add   space          space_template center                \
            --set   spaces_1.idle  associated_space=1                 \
                                   icon=⬤                            \
                                   script="$PLUGIN_DIR/space.sh"      \
-                                  icon.padding_left=3               \
+                                  icon.padding_left=8               \
                                                                      \
            --clone spaces_1.misc  space_template                     \
            --set   spaces_1.misc  associated_space=2                 \

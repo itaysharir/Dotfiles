@@ -1,5 +1,9 @@
 status () {
-  if spotify status | grep -q 'playing'; then
+  if  osascript -e 'tell application "Spotify"
+    set playerState to player state as string
+end tell
+playerState
+' | grep -q 'playing'; then
     echo "playing"
   else
     echo "paused"
