@@ -98,14 +98,16 @@ step "Installing dependencies/fonts/pacman (My own font for pacman symobols)"
 cp misc/fonts/Pacman-Dots.ttf ~/Library/Fonts/Pacman-Dots.ttf
 
 step "Moving everything to the right place"
-
 configs_home=("sketchybar" "yabai" "skhd" "alacritty" "cava" "dmenu-scripts")
 for i in "${!configs_home[@]}"; do
-  cp -r config/rices/Pacman/$(CONFIGS_HOME[i]) ~/.config/
+  cp -r config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
+  echo "Moved ${configs_home[i]}"
 done
 cp config/zsh/.zshrc ~/.zshrc
 cp -r config/zsh/.zsh ~/.zsh
+echo "Moved zsh"
 cp config/starship/starship.toml ~/.config/starship.toml
+echo "Moved starship"
 
 step "Installing dmenu (??)"
 read -p "Do you wish to install dmenu? (This is going to take a while) (y/n) " yn
