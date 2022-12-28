@@ -27,6 +27,7 @@ then
    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
    echo "brew is already installed, you're set."
+   sleep 1
 fi
 
 install () {
@@ -34,6 +35,7 @@ install () {
        brew install "$@"
     else
        echo "'$@' is already installed, you're set."
+       sleep 1
     fi
 }
 
@@ -96,14 +98,11 @@ step "Installing dependencies/fonts/pacman (My own font for pacman symobols)"
 cp misc/fonts/Pacman-Dots.ttf ~/Library/Fonts/Pacman-Dots.ttf
 
 step "Moving everything to the right place"
-# theme spacific
-cp -r config/rices/Pacman/sketchybar ~/.config/sketchybar
-cp -r config/rices/Pacman/yabai ~/.config/yabai
-cp -r config/rices/Pacman/skhd ~/.config/skhd
-cp -r config/rices/Pacman/alacritty ~/.config/alacritty
-cp -r config/rices/Pacman/cava ~/.config/cava
-# not theme spacific
-cp -r config/dmenu-scripts ~/.config/dmenu-scripts
+
+configs_home=("sketchybar" "yabai" "skhd" "alacritty" "cava" "dmenu-scripts")
+for i in "${!configs_home[@]}"; do
+  cp -r config/rices/Pacman/$(CONFIGS_HOME[i]) ~/.config/
+done
 cp config/zsh/.zshrc ~/.zshrc
 cp -r config/zsh/.zsh ~/.zsh
 cp config/starship/starship.toml ~/.config/starship.toml
