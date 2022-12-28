@@ -18,6 +18,9 @@ step () {
     echo "\n"
 }
 
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 step "Checking if brew is installed"
 
 if ! command -v brew &> /dev/null
@@ -41,30 +44,38 @@ else
    echo "brew is already installed, you're set."
 fi
 
-step "Installing dependencies/apps/sketchybar"
+install () {
+    if ! command -v "$@" &> /dev/null; then
+       brew install "$@"
+    else
+       echo "'$@' is already installed, you're set."
+    fi
+}
+
+step "Installing dependencies/apps/sketchybar if not already installed"
 brew tap FelixKratz/formulae
-brew install sketchybar
+install sketchybar
 
-step "Installing dependencies/apps/yabai"
-brew install koekeishiya/formulae/yabai
+step "Installing dependencies/apps/yabai if not already installed"
+install koekeishiya/formulae/yabai
 
-step "Installing dependencies/apps/skhd"
-brew install koekeishiya/formulae/skhd
+step "Installing dependencies/apps/skhd if not already installed"
+install koekeishiya/formulae/skhd
 
-step "Installing dependencies/apps/alacritty"
-brew install alacritty
+step "Installing dependencies/apps/alacritty if not already installed"
+install alacritty
 
-step "installing dependencies/apps/jq"
-brew install jq
+step "installing dependencies/apps/jq if not already installed"
+install jq
 
 step "Installing dependencies/apps/oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-step "Installing dependencies/apps/cava"
-brew install cava
+step "Installing dependencies/apps/cava if not already installed"
+install cava
 
-step "Installing dependencies/apps/starship"
-brew install starship
+step "Installing dependencies/apps/starship if not already installed"
+install starship
 
 step "Installing apps/firefox"
 brew install firefox
