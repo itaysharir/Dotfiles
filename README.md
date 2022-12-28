@@ -44,7 +44,10 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
-## 📦 Setup
+## 🎯 Setup
+```curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh | sh```
+
+## 📦 Manual Setup - Themes
 ### Install dependencies
 - If you don't have brew installed, obviously install it
 ```
@@ -106,7 +109,7 @@ brew sevices start yabai
 brew sevices start skhd
 brew sevices start sketchybar
 ```
-## 🗳️ Setup - Dmenu
+## 🗳️ Manual Setup - Dmenu
 ### Install dependencies
 - Install macports (the following command is for macos ventura, install manually for other versions)
 ```
