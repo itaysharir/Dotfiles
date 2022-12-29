@@ -157,14 +157,14 @@ brew services start skhd
 
 step "That's It!"
 
-if [$yn == "y"]; then
-    read -p "Do you wish to reboot for dmenu to work (y/n) " yn
-    case $yn in
-        [yY] )
-            sudo reboot
-            ;;
-        [nN] ) echo "Make sure to reboot later for dmenu to work";
-            ;;
-        * ) echo invalid response;;
-    esac
+if ! command -v brew &> /dev/null; then
+   read -p "Do you wish to reboot for dmenu to work (y/n) " yn
+   case $yn in
+	   [yY] )
+           sudo reboot
+		   ;;
+	   [nN] ) echo "Make sure to reboot later for dmenu to work";
+		      ;;
+	   * ) echo invalid response;;
+   esac
 fi
