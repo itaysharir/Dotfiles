@@ -44,11 +44,11 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
-## 🎯 Setup
+## 🎯 Setup (Reccomanded, easier)
 To install my Dotfiles, i made an easy install script. To use it, run the following command. <br>
 ```/bin/sh -c "$(curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh)"```
 
-## 📦 Manual Setup - Themes
+## 📦 Manual Setup - Themes (Reccommended less, harder)
 ### Install dependencies
 - If you don't have brew installed, obviously install it
 ```
@@ -110,7 +110,7 @@ brew sevices start yabai
 brew sevices start skhd
 brew sevices start sketchybar
 ```
-## 🗳️ Manual Setup - Dmenu
+## 🗳️ Manual Setup - Dmenu (Reccommended less, harder)
 ### Install dependencies
 - Install macports (the following command is for macos ventura, install manually for other versions)
 ```
