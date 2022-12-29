@@ -61,8 +61,14 @@ install alacritty
 step "installing dependencies/apps/jq if not already installed"
 install jq
 
+step "install wget"
+install wget
+
 step "Installing dependencies/apps/oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd ~/
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh --unattended
+rm -rf install.sh
 
 step "Installing dependencies/apps/cava if not already installed"
 install cava
@@ -100,7 +106,6 @@ cp misc/fonts/Pacman-Dots.ttf ~/Library/Fonts/Pacman-Dots.ttf
 step "Moving everything to the right place"
 configs_home=("sketchybar" "yabai" "skhd" "alacritty" "cava" "dmenu-scripts")
 for i in "${!configs_home[@]}"; do
-    cd ~/Dotfiles
     cp -r ~/Dotfiles/config/rices/Pacman/${CONFIGS_HOME[i]} ~/.config/
     echo "Moved ${configs_home[i]}"
 done
@@ -116,7 +121,6 @@ case $yn in
 	[yY] )
         step "Installing macports if not already installed"
          if ! command -v port &> /dev/null; then
-            brew install wget
             wget https://github.com/macports/macports-base/releases/download/v2.8.0/MacPorts-2.8.0-13-Ventura.pkg
             open MacPorts-2.8.0-13-Ventura.pkg
             dialog --prgbox "Prompt" "echo 'Press OK when the install \nfinished'"  10 30
@@ -153,12 +157,14 @@ brew services start skhd
 
 step "That's It!"
 
-read -p "Do you wish to reboot for dmenu to work (y/n) " yn
-case $yn in
-	[yY] )
-        sudo reboot
-		;;
-	[nN] ) echo "Make sure to reboot later for dmenu to work";
-		;;
-	* ) echo invalid response;;
-esac
+if [$yn == "y"]; then
+    read -p "Do you wish to reboot for dmenu to work (y/n) " yn
+    case $yn in
+        [yY] )
+            sudo reboot
+            ;;
+        [nN] ) echo "Make sure to reboot later for dmenu to work";
+            ;;
+        * ) echo invalid response;;
+    esac
+fi
