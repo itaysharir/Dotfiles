@@ -44,11 +44,14 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
-## 🎯 Setup (Recommended, easier)
+## 🎯 Setup
 To install my Dotfiles, i made an easy install script. To use it, run the following command. <br>
 ```/bin/sh -c "$(curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh)"```
 
-## 📦 Manual Setup - Themes (Recommended less, harder)
+<details id="manual">
+<summary><b>For manual setup</b></summary>
+
+## 📦 Manual Setup - Themes
 ### Install dependencies
 - If you don't have brew installed, obviously install it
 ```
@@ -110,7 +113,7 @@ brew sevices start yabai
 brew sevices start skhd
 brew sevices start sketchybar
 ```
-## 🗳️ Manual Setup - Dmenu (Recommended less, harder)
+## 🗳️ Manual Setup - Dmenu
 ### Install dependencies
 - Install macports (the following command is for macos ventura, install manually for other versions)
 ```
@@ -157,6 +160,8 @@ brew services restart skhd
 ```
 - Reboot
 - Now dmenu and the scripts are installed. If you've followed all above instructions, you should be able to hit ```cmd + shift + return``` to open the dmenu script that launches apps. See my skhd config for additional keyblindings. 
+
+</details>
 
 ## 🕸 Troubleshooting
 If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc
