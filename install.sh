@@ -1,7 +1,9 @@
 #! /bin/sh
 
-xcode-select --install
-read -p "Follow the instructions on screen, Press return when the install finished"
+if [ $(/Library/Developer/CommandLineTools) == "/Library/Developer/CommandLineTools" ]; then
+  xcode-select --install
+  read -p "Follow the instructions on screen, Press return when the install finished"
+fi
 
 step () {
     final=$(echo "$@")
