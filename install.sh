@@ -153,6 +153,13 @@ case $yn in
 	* ) echo invalid response;;
 esac
 
+step "Hiding Dock and menu bar"
+osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+osascript -e 'tell application "System Events"
+tell dock preferences to set autohide menu bar to not autohide menu bar
+end tell'
+
+
 step "Starting services"
 brew services start sketchybar
 brew services start yabai
