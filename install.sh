@@ -1,7 +1,7 @@
 #! /bin/sh
 
 xcode-select --install
-dialog --prgbox "Follow the instructions" "echo 'Press OK when the install \nfinished'"  10 30
+read -p "Follow the instructions on screen, Press return when the install finished"
 
 step () {
     final=$(echo "$@")
@@ -41,9 +41,6 @@ install () {
        sleep 1
     fi
 }
-
-step "Installing dialog"
-install dialog
 
 step "Installing dependencies/apps/sketchybar if not already installed"
 brew tap FelixKratz/formulae
@@ -126,7 +123,7 @@ case $yn in
          if ! command -v port &> /dev/null; then
             wget https://github.com/macports/macports-base/releases/download/v2.8.0/MacPorts-2.8.0-13-Ventura.pkg
             open MacPorts-2.8.0-13-Ventura.pkg
-            dialog --prgbox "Follow the instructions" "echo 'Press OK when the install \nfinished'"  10 30
+            read -p "Follow the instructions on screen, Press return when the install finished"
         else
             echo "macports is already installed, you're set."
         fi
