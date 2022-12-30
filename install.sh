@@ -1,4 +1,7 @@
-#! //bin/sh
+#! /bin/sh
+
+xcode-select --install
+dialog --prgbox "Follow the instructions" "echo 'Press OK when the install \nfinished'"  10 30
 
 step () {
     final=$(echo "$@")
@@ -123,7 +126,7 @@ case $yn in
          if ! command -v port &> /dev/null; then
             wget https://github.com/macports/macports-base/releases/download/v2.8.0/MacPorts-2.8.0-13-Ventura.pkg
             open MacPorts-2.8.0-13-Ventura.pkg
-            dialog --prgbox "Prompt" "echo 'Press OK when the install \nfinished'"  10 30
+            dialog --prgbox "Follow the instructions" "echo 'Press OK when the install \nfinished'"  10 30
         else
             echo "macports is already installed, you're set."
         fi
