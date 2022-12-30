@@ -100,6 +100,9 @@ brew install font-fira-code-nerd-font
 step "Installing dependencies/fonts/monoscraft"
 brew install font-monocraft
 
+step "Installing dependencies/fonts/material-icons"
+brew install font-material-icons
+
 step "Cloning my Dotfiles repository"
 git clone https://github.com/itaysharir/Dotfiles ~/Dotfiles && cd Dotfiles
 
@@ -131,13 +134,15 @@ case $yn in
             echo "macports is already installed, you're set."
         fi
 
+        PORT="/opt/local/bin/port"
+
         step "Installing dependencies/dmenu (This is going to take about 20 minutes, do not cancel the script)"
-        sudo port install dmenu
-        sudo port uninstall dmenu
+        sudo $PORT install dmenu
+        sudo $PORT uninstall dmenu
         # installing and then uninstalling right away might seem pointless, but this way all dependencies are installed.
 
         step "Installing dependencies/dmenu/script/wallpaper/sxiv"
-        sudo port install sxiv
+        sudo $PORT install sxiv
 
         step "Installing dependencies/dmenu/script/wallpaper/pywal (fork)"
         sudo pip3 uninstall pywal; sudo rm $(which wal) # if pywal is installed, remove it
