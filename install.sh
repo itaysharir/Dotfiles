@@ -1,10 +1,5 @@
 #! /bin/sh
 
-if [ $(/Library/Developer/CommandLineTools) == "/Library/Developer/CommandLineTools" ]; then
-  xcode-select --install
-  read -p "Follow the instructions on screen, Press return when the install finished"
-fi
-
 step () {
     final=$(echo "$@")
     plus=$(expr ${#final} + 6)
@@ -23,8 +18,14 @@ step () {
     echo "\n"
 }
 
-step "Installing brew if not already installed"
+step "Installing xcode command lien tools if not already installed"
+if xcode-select -p | grep -q '/Library/Developer/CommandLineTools'; then
+  cd
+else
+   read -p "Follow the instructions on screen, Press return when the install finished"
+fi
 
+step "Installing brew if not already installed"
 if ! command -v brew &> /dev/null
 then
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
