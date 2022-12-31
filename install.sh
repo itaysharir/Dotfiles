@@ -164,11 +164,6 @@ osascript -e 'tell application "System Events"
 tell dock preferences to set autohide menu bar to not autohide menu bar
 end tell'
 
-open -a System\ Settings
-open /opt/homebrew/bin/
-open -a Finder
-read -p "Please drag the files 'yabai' and 'skhd' to the system settings window"
-
 step "Starting services"
 brew services start sketchybar
 brew services start yabai
