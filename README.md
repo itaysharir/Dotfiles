@@ -1,6 +1,6 @@
 # Dotfiles | macOS themes collection
 
-## 🏓 Introduction
+## 🚀 Introduction
 I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behave just like i want it to. These are my Dotfiles, with 2 themes. Enjoy! <br>
 
 [watch](https://user-images.githubusercontent.com/87126382/208316922-5e40e95a-5ce8-4d09-afd7-1add83b876a8.mp4)
@@ -15,7 +15,7 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 |Menu|[Dmenu](https://tools.suckless.org/dmenu/)|
 |Terminal|[alacritty](https://github.com/alacritty/alacritty)|
 
-## 🚀 Why are my Dotfiles different than (most) others?
+## 💡 Why are my Dotfiles different than (most) others?
 - 2 different themes instead of 1
 - A dmenu script to easily switch between these themes
 - Speaking of dmenu, my Dotfiles have 7 other dmenu scripts for you to explore and use!
@@ -35,23 +35,23 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
    </tr>
    </table>
    
-## 🏜️ The themes
-### 🕹️Pacman:
+## 🎯 The themes
+### 🎑 Pacman:
 |<img src="assets/pacman_rice.png" align="center" width="600px">|<img src="assets/pacman_rice_used.png" align="center" width="600px">|
 |---|---|
 
-### 🎤 DT’s Xmonad:
+### 🏙️ DT’s Xmonad:
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
-## 🎯 Setup
+## 📦 Setup
 To install my Dotfiles, i made an easy install script. To use it, run the following command. <br>
 ```/bin/sh -c "$(curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh)"```
 
 <details id="manual">
 <summary><b>For manual setup</b></summary>
 
-## 📦 Manual Setup - Themes
+## Manual Setup - Themes
 ### Install dependencies
 - If you don't have brew installed, obviously install it
 ```
@@ -113,7 +113,7 @@ brew sevices start yabai
 brew sevices start skhd
 brew sevices start sketchybar
 ```
-## 🗳️ Manual Setup - Dmenu
+## Manual Setup - Dmenu
 ### Install dependencies
 - Install macports (the following command is for macos ventura, install manually for other versions)
 ```
