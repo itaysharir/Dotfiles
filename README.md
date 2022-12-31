@@ -163,10 +163,10 @@ brew services restart skhd
 
 </details>
 
-## 🕸 Troubleshooting
+## 🧩 Troubleshooting
 If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc
 ```mv ~/.xinitrc ~/.xinitrc.backup```
 
-## 😁 Credits
+## 🎉 Credits
 - Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
 - [gh0stzk](https://github.com/gh0stzk/dotfiles) I also took HUGE inspotations from your Emilia theme for my "Pacman" theme. I also completly ripped off your README.md design
