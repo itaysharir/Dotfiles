@@ -8,7 +8,7 @@ fi
 
 if [ "$SELECTED" = "true" ]; then
   args+=(--set spaces_$DID.label label=${NAME#"spaces_$DID."} \
-         --set $NAME icon.background.y_offset=-9              )
+         --set $NAME icon.background.y_offset=9              )
 else
   args+=(--set $NAME icon.background.y_offset=-20)
 fi
