@@ -1,47 +1,50 @@
-#!/usr/bin/env sh
+### cpu Widget ###
+sketchybar --add item  cpu left                                                   \
+           --set cpu   update_freq=10                                              \
+                       icon.font="Font Awesome 6 Free:Solid:15.4"                  \
+                       icon.padding_right=4                                        \
+                       icon.color=0xfff6768e                                       \
+                       icon.y_offset=1                                             \
+                       label.font="$FONT:Medium:12.0"                                \
+                       label.color=0xffdfe1ea                                      \
+                       label.padding_right=8                                       \
+                       background.color=0xff252731                                 \
+                       background.height=33                                      \
+                       background.corner_radius=20                                   \
+                       background.padding_right=3                                  \
+                       script="$PLUGIN_DIR/cpu.sh"                                 \
+                       icon.padding_left=16 label.padding_right=16                   \
 
-sketchybar --add       item               discord right                                       \
-           --set       discord            background.image=/Users/itaysharir/.config/sketchybar/assets/discord-logo.png \
-                                          background.image.scale=0.015                            \
-                                          background.drawing=on                                 \
-                                          background.padding_right=5                            \
-                                          background.padding_left=-2                            \
+### mem Widget ###
+sketchybar --add item  mem left                                                   \
+           --set mem   update_freq=10                                              \
+                       icon.font="Font Awesome 6 Free:Solid:15.4"                  \
+                       icon.padding_right=4                                        \
+                       icon.color=0xff4ed2e3                                       \
+                       icon.y_offset=1                                              \
+                       label.font="$FONT:Medium:12.0"                                \
+                       label.color=0xffdfe1ea                                      \
+                       label.padding_right=8                                       \
+                       background.color=0xff252731                                 \
+                       background.height=33                                      \
+                       background.corner_radius=20                                   \
+                       background.padding_right=3                                  \
+                       script="$PLUGIN_DIR/mem.sh"                                 \
+                       icon.padding_left=16 label.padding_right=16                   \
 
-# sketchybar --add       alias              "Cardhop,Item-0" right                       \
-#            --set    "Cardhop,Item-0" update_freq=1                                 \
-#                                           icon.drawing=off                              \
-#                                           label.drawing=off                             \
-#                                           background.padding_left=-10                    \
-#                                           background.padding_right=-11                            \
-
-sketchybar --add       alias              "Control Center,WiFi" right                       \
-           --set    "Control Center,WiFi" update_freq=1                                 \
-                                          icon.drawing=off                              \
-                                          label.drawing=off                             \
-                                          background.padding_left=-12                    \
-                                          background.padding_right=-8                            \
-
-sketchybar --add       alias              "SystemUIServer,TMMenuExtra" right                       \
-           --set    "SystemUIServer,TMMenuExtra" update_freq=1                                 \
-                                          icon.drawing=off                              \
-                                          label.drawing=off                             \
-                                          background.padding_left=-12                    \
-                                          background.padding_right=-8                            \
-
-# sketchybar --add       item               spotify right                                       \
-#            --set       spotify            background.image=/Users/itaysharir/.config/sketchybar/assets/spotify-logo.png \
-#                                           background.image.scale=0.007                            \
-#                                           background.drawing=on                                 \
-#                                           background.padding_left=-2                    \
-
-sketchybar --add       alias              "Control Center,Sound" right                       \
-           --set    "Control Center,Sound" update_freq=1                                 \
-                                          icon.drawing=off                              \
-                                          label.font="Font Awesome 6 Brands:Regular:12.0"           \
-                                          background.padding_right=-14                           \
-                                          background.padding_left=-10                           \
-
-sketchybar --add       item               obs right                                       \
-           --set       obs                background.image=/Users/itaysharir/.config/sketchybar/assets/obs-logo.png \
-                                          background.image.scale=0.028                            \
-                                          background.drawing=on                                 \
+### ssd Widget ###
+sketchybar --add item  ssd left                                                   \
+           --set ssd   update_freq=10                                              \
+                       icon.font="Font Awesome 6 Free:Solid:15.4"                  \
+                       icon.padding_right=4                                        \
+                       icon.color=0xfffbc02d                                       \
+                       icon.y_offset=1                                              \
+                       label.font="$FONT:Medium:12.0"                                \
+                       label.color=0xffdfe1ea                                      \
+                       label.padding_right=8                                       \
+                       background.color=0xff252731                                 \
+                       background.height=33                                      \
+                       background.corner_radius=20                                   \
+                       background.padding_right=3                                  \
+                       script="$PLUGIN_DIR/disk.sh"                                 \
+                       icon.padding_left=16 label.padding_right=16                   \

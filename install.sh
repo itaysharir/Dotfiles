@@ -15,14 +15,22 @@ step () {
     printhashtags
     echo "\n## $@ ##"
     printhashtags
-    echo "\n"
+    echo
 }
 
 step "Installing xcode command lien tools if not already installed"
-if xcode-select -p | grep -q '/Library/Developer/CommandLineTools'; then
-  cd
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+  echo "Xcode CLI tools not found. Installing them..."
+  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+  PROD=$(softwareupdate -l |
+    grep "\*.*Command Line" |
+    head -n 1 | awk -F"*" '{print $2}' |
+    sed -e 's/^ *//' |
+    tr -d '\n')
+  softwareupdate -i "$PROD" -v;
 else
-   read -p "Follow the instructions on screen, Press return when the install finished"
+  echo "'xcode command line tools' is already installed, you're set."
 fi
 
 step "Installing brew if not already installed"
