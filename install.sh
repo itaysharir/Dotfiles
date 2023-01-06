@@ -18,7 +18,7 @@ step () {
     echo
 }
 
-step "Installing xcode command lien tools if not already installed"
+step "Installing xcode command line tools if not already installed"
 xcode-select -p &> /dev/null
 if [ $? -ne 0 ]; then
   echo "Xcode CLI tools not found. Installing them..."
@@ -173,9 +173,9 @@ tell dock preferences to set autohide menu bar to not autohide menu bar
 end tell'
 
 step "Starting services"
-brew services start sketchybar
-brew services start yabai
-brew services start skhd
+brew services restart sketchybar
+brew services restart yabai
+brew services restart skhd
 
 step "That's It!"
 
