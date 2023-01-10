@@ -164,7 +164,7 @@ brew services restart skhd
 </details>
 
 ## 🚧 Troubleshooting
-If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc
+If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc <br>
 ```mv ~/.xinitrc ~/.xinitrc.backup```
 
 ## 🎉 Credits
