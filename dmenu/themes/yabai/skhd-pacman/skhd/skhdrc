@@ -155,6 +155,3 @@ alt - f : yabai -m space --mirror y-axis         # Flip the tree
 ### Change layout of desktop ###
 cmd + alt - a : yabai -m config layout bsp
 cmd + alt - s : yabai -m config layout float
-
-### disable ###
-cmd - q : cd # cmd + q

@@ -23,4 +23,4 @@ SCREENSHOTFORMAT="png"                     # screenshot format
 # editconfig
 # settings for the editconfig script
 EDIT="emacsclient"   # editor to launch config files in        (usage: nvim, emacsclient, emacs, vscode)
-TERMINAL="Alacritty" # for nvim users, which terminal to use   (usage: kitty, alacritty) # iTerm not supported yet, sorry
+TERMINAL="Alacritty" # for nvim users, which terminal to use   (usage: kitty, alacritty) # iTerm and Terminal.app are not supported yet, sorry

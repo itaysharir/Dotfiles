@@ -5,7 +5,7 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "FiraCode Nerd Font"
+    family: "Hack Nerd Font"
     #style: Regular
 
   # Bold font face
@@ -24,7 +24,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 13.5
+  size: 13.8
 
   # Offset
   #offset:
