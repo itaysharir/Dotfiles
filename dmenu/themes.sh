@@ -7,6 +7,7 @@
 choice=$(printf \
          "dt-xmonad\\
 pacman\\
+stock\\
 "\
 | sed 's/\\//' | ${DMENU} "Select theme:") # pipe options into dmenu
 
@@ -14,6 +15,45 @@ pacman\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
+    if [ $choice == "stock" ]; then
+        # stop services
+        brew services stop sketchybar
+        brew services stop yabai
+
+        osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to false"
+        osascript -e 'tell application "System Events"
+        tell dock preferences to set autohide menu bar to not autohide menu bar
+        end tell'
+
+        killall Xquartz
+        open -a Xquartz
+
+        echo $choice > "${FOLDER}/themes/current"
+
+        # set wallpaper
+        wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
+        timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
+
+        exit
+    fi
+
+    # Restart Xquartz
+    killall Xquartz
+    open -a Xquartz
+
+    current=$(cat ~/Dotfiles/dmenu/themes/current)
+    # make sure dock and menubar are hidden
+    if [ $current == "stock" ]; then
+         osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+         osascript -e 'tell application "System Events"
+             tell dock preferences to set autohide menu bar to not autohide menu bar
+             end tell'
+    fi
+
+    # make sure yabai and sketchybar are active
+    brew services start yabai
+    brew services start sketchybar
+
     # move sketchybar up
     sleep 1
     sketchybar --animate sin 30 --bar y_offset=-100
@@ -39,7 +79,7 @@ else # if choice is not empty, do the following:
     ~/.config/sketchybar/sketchybarrc
 
     # write the theme's number to a text file for other scripts to use
-    echo $choice > ~/dmenu\ scripts/themes/current
+    echo $choice > "${FOLDER}/themes/current"
 
     # set wallpaper
     wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable

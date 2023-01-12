@@ -172,6 +172,9 @@ osascript -e 'tell application "System Events"
 tell dock preferences to set autohide menu bar to not autohide menu bar
 end tell'
 
+step "Removing xterm as a startup item"
+defaults write org.macosforge.xquartz.X11 app_to_run $(which true)
+
 step "Starting services"
 brew services restart sketchybar
 brew services restart yabai
