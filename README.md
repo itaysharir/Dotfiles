@@ -43,7 +43,7 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 ### 🏙️ DT’s Xmonad:
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
-### 🏙️ Stock:
+### 🌌 Stock:
 |<img src="assets/stock_rice.png" align="center" width="600px">|<img src="assets/stock_rice_used.png" align="center" width="600px">|
 |---|---|
 
