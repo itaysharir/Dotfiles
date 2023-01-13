@@ -1,11 +1,18 @@
 # Dotfiles | macOS themes collection
 
-## 🚀 Introduction
+<div style="display: flex; flex-direction:row;">
+<img src="https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" />
+<img src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" />
+<img src="https://img.shields.io/badge/Emacs-%237F5AB6.svg?&style=for-the-badge&logo=gnu-emacs&logoColor=white" />
+<img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+</div>
+
+## ☘️ Introduction
 I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behave just like i want it to. These are my Dotfiles, with 2 themes. Enjoy! <br>
 
 [watch](https://user-images.githubusercontent.com/87126382/208316922-5e40e95a-5ce8-4d09-afd7-1add83b876a8.mp4)
 
-## 🌃 Dmenu script for switching between themes
+## 🚀 Dmenu script for switching between themes
 <img src="assets/themes_dmenu.png" align="right" height="200px" width="330">
 
 |OS|macOS (Ventura, 13.1)|
