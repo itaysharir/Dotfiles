@@ -174,8 +174,10 @@ brew services restart skhd
 </details>
 
 ## 🚧 Troubleshooting
-If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc <br>
-```mv ~/.xinitrc ~/.xinitrc.backup```
+- If Xquartz crashes immediately after hitting the keyblindings or running dmenu, remove ~/.xinitrc <br>
+```mv ~/.xinitrc ~/.xinitrc.backup``` 
+- If the menubar and dock hiding doesn't work well, make sure the menubar and dock are NOT hidden, then run the install script (with the command above)
+- If dmenu doesn't work when the "Dotfiles" folder is removed, copy the "dmenu" folder to a new location (because you cannot remove that folder), then change the variable $FOLDER in ~/.config/dmenu-scripts/config.sh to the new dmenu folder location.
 
 ## 🎉 Credits
 - Obviously, DT. I took HUGE insporation for the "DT's Xmonad" theme from your xmobar & xmonad configs.
