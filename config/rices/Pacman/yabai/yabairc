@@ -71,7 +71,7 @@ elif [[ $external_bar_position == "right" ]]; then
 fi
 
 ### Window rules/exeptions ###
-yabai -m rule --add app="^(Calculator|System Preferences|zoom.us|Photo Booth|Archive Utility|Color Picker|balenaEtcher)$" manage=off  # Don't tile unresizable apps
+yabai -m rule --add app="^(Calculator|System Settings|zoom.us|Photo Booth|Archive Utility|Color Picker|balenaEtcher)$" manage=off  # Don't tile unresizable apps
 yabai -m rule --add app="^(XQuartz)$" layer=above manage=off  # Don't tile xquartz (i use it for dmenu)
 
 ### Space labels ###

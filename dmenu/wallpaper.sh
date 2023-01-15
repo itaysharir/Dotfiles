@@ -5,7 +5,7 @@
 
 # function for choosing a spacific wallpaper
 choose () {
-    cd ~/wallpapers
+    cd $WALLPAPER_DIR
     wall=$(/opt/local/bin/sxiv -r -q -t -b -o *)
 
     if [ -z "$wall" ]; then
@@ -19,8 +19,8 @@ choose () {
 
 # function for choosing a random wallpaper
 random () {
-    export file=$(ls -R ~/wallpapers/ | shuf -n 1)
-    timeout 1s wal -i ~/wallpapers/$file
+    export file=$(ls -R $WALLPAPER_DIR | shuf -n 1)
+    timeout 1s wal -i $WALLPAPER_DIR/$file
     yabai -m config window_shadow off
     echo $(cat ~/.cache/wal/wal) >> ${FOLDER}/.wallpaper_history
 }

@@ -15,16 +15,18 @@ stock\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
+    # if choice is stock, do the following ONLY, then exit
     if [ $choice == "stock" ]; then
         # stop services
         brew services stop sketchybar
         brew services stop yabai
 
-        osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to false"
+        # enable dock and menubar
         osascript -e 'tell application "System Events"
         tell dock preferences to set autohide menu bar to not autohide menu bar
         end tell'
 
+        # restart xquartz
         killall Xquartz
         open -a Xquartz
 
@@ -44,7 +46,6 @@ else # if choice is not empty, do the following:
     current=$(cat ~/Dotfiles/dmenu/themes/current)
     # make sure dock and menubar are hidden
     if [ $current == "stock" ]; then
-         osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
          osascript -e 'tell application "System Events"
              tell dock preferences to set autohide menu bar to not autohide menu bar
              end tell'
