@@ -182,7 +182,7 @@ brew services restart skhd
 
 step "That's It!"
 
-if ! command -v brew &> /dev/null; then
+if ! command -v dmenu &> /dev/null; then
    read -p "Do you wish to reboot for dmenu to work (y/n) " yn
    case $yn in
 	   [yY] )
