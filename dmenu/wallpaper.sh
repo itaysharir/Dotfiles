@@ -29,11 +29,13 @@ random () {
 apply () {
     export currentwall=$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')
 
-    if [[ $(cat ~/Dotfiles/dmenu/themes/current) == "dt-xmonad" ]]; then
-        echo $currentwall > ${FOLDER}/themes/wallpapers/dt-xmonad
-    elif [[ $(cat ~/Dotfiles/dmenu/themes/current) == "pacman" ]]; then
-        echo $currentwall > ${FOLDER}/themes/wallpapers/pacman
-    fi
+    case $(cat ~/Dotfiles/dmenu/themes/current) in
+        dt-xmonad) echo $currentwall > ${FOLDER}/themes/wallpapers/dt-xmonad
+                   ;;
+        pacman) echo $currentwall > ${FOLDER}/themes/wallpapers/pacman
+                ;;
+        aline) echo $currentwall > ${FOLDER}/themes/wallpapers/aline
+    esac
 }
 
 # a function to undo setting a wallpaper

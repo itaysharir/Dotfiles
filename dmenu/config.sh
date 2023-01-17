@@ -12,11 +12,15 @@
 # settings that apple to all scripts
 DMENU="dmenu -i -l 20 -p" # define dmenu prompt
 DMENU_APPS="dmenu -i" # define dmenu prompt for apps.sh
-FOLDER="/Users/$(whoami)/Dotfiles/dmenu" # the folder where the dmenu scripts are located
+FOLDER="$HOME/Dotfiles/dmenu" # the folder where the dmenu scripts are located
+
+# wallpapers
+# settings for the wallpaper script
+WALLPAPER_DIR="$HOME/wallpapers" # directory with wallpaper image files
 
 # screenshot
 # settings for the screenshot script
-SCREENSHOTPATH="/Users/$(whoami)/Desktop/" # path to save screenshots to (put a / at the end)
+SCREENSHOTPATH="$HOME/Desktop/"            # path to save screenshots to (put a / at the end)
 SCREENSHOTNAME="screenshot"                # screenshot name
 SCREENSHOTFORMAT="png"                     # screenshot format
 

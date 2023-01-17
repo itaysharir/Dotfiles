@@ -7,6 +7,7 @@
 choice=$(printf \
          "dt-xmonad\\
 pacman\\
+aline\\
 stock\\
 "\
 | sed 's/\\//' | ${DMENU} "Select theme:") # pipe options into dmenu
@@ -68,6 +69,7 @@ else # if choice is not empty, do the following:
     # move desired configs to ~/.config
     cp -r ${FOLDER}/themes/sketchybar/sketchybar-$choice ~/.config/sketchybar    # sketchybar
     cp -r ${FOLDER}/themes/yabai/yabai-$choice ~/.config/yabai                   # yabai
+    cp -r ${FOLDER}/themes/skhd/skhd-$choice ~/.config/skhd                      # skhd
     cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
     cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
 
