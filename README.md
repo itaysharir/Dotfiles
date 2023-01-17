@@ -6,7 +6,7 @@ I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behav
 https://user-images.githubusercontent.com/87126382/212973076-3a796a19-ae06-4aa9-83e1-671493efe326.mp4
 
 ## 🚀 Dmenu script for switching between themes
-<img src="assets/themes_dmenu.png" align="right" height="200px" width="330">
+<img src="assets/themes_dmenu.png" align="right" height="200px" width="400">
 
 |OS|macOS (Ventura, 13.1)|
 |:---:|:---:|
