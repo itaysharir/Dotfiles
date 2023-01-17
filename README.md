@@ -44,7 +44,7 @@ https://user-images.githubusercontent.com/87126382/212973076-3a796a19-ae06-4aa9-
 |<img src="assets/dt-xmonad_rice.png" align="center" width="600px">|<img src="assets/dt-xmonad_rice_used.png" align="center" width="600px">|
 |---|---|
 
-### 🎑 Aline:
+### 🗾 Aline:
 |<img src="assets/aline_rice.png" align="center" width="600px">|<img src="assets/aline_rice_used.png" align="center" width="600px">|
 |---|---|
 
