@@ -16,9 +16,9 @@ https://user-images.githubusercontent.com/87126382/212973076-3a796a19-ae06-4aa9-
 |Terminal|[alacritty](https://github.com/alacritty/alacritty)|
 
 ## 💡 Why are my Dotfiles different than (most) others?
-- 2 different themes instead of 1
+- 3 (Technically 4) different themes instead of 1
 - A dmenu script to easily switch between these themes
-- Speaking of dmenu, my Dotfiles have 7 other dmenu scripts for you to explore and use!
+- Not just themes, A bunch of dmenu scripts!
 
 <table align="center">
    <tr>
