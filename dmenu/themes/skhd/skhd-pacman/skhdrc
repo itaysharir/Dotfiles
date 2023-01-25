@@ -8,8 +8,6 @@
 ### Open apps ###
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty  # open a terminal
 cmd - m : emacsclient -c                                             # open a graphical emacs client
-cmd - b : /Applications/Firefox.app/Contents/MacOS/firefox           # open firefox
-cmd - e : sh ~/.config/skhd/open-finder.sh                           # open finder
 
 ### Various dmenu scripts ###
 cmd + shift - return : open -a Xquartz && /bin/bash -l -c "sh ~/Dotfiles/dmenu/apps.sh"  # App launcher
@@ -144,9 +142,6 @@ alt - 9 : yabai -m window --space 9
 alt - left : yabai -m window --space prev   # Send window to space on the left
 alt - right : yabai -m window --space next  # Send window to space on the right
 
-### Fullscreen ###
-cmd - space : yabai -m window --toggle zoom-fullscreen &&
-
 ### Rotate and flip ###
 alt - r : yabai -m space --rotate 90             # Rotate the tree 90 degrees
 alt + shift - r : yabai -m space --rotate 180    # Rotate the tree 180 degrees
@@ -155,6 +150,3 @@ alt - f : yabai -m space --mirror y-axis         # Flip the tree
 ### Change layout of desktop ###
 cmd + alt - a : yabai -m config layout bsp
 cmd + alt - s : yabai -m config layout float
-
-### disable ###
-cmd - q : cd # cmd + q

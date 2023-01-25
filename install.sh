@@ -167,13 +167,25 @@ case $yn in
 esac
 
 step "Hiding Dock and menu bar"
-osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
-osascript -e 'tell application "System Events"
-tell dock preferences to set autohide menu bar to not autohide menu bar
-end tell'
+read -p "Is your dock currently hidden? (y/n)" dock_hide
+if [ $dock_hide == "n" ]; then
+  osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+fi
 
-step "Removing xterm as a startup item"
-defaults write org.macosforge.xquartz.X11 app_to_run $(which true)
+read -p "Is your menu bar currently hidden? (y/n)" menu_hide
+if [ $menu_hide == "n" ]; then
+    osascript -e 'tell application "System Events"
+    tell dock preferences to set autohide menu bar to not autohide menu bar
+    end tell'
+fi
+
+step "make sure dark mode is activated"
+osascript -e 'tell application "System Events"
+    tell appearance preferences
+        set dark mode to not dark mode
+    end tell
+end tell
+'
 
 step "Starting services"
 brew services restart sketchybar
@@ -181,6 +193,7 @@ brew services restart yabai
 brew services restart skhd
 
 step "That's It!"
+echo "The dmenu scripts have a config file at ~/.config, feel free to modify it"
 
 if ! command -v dmenu &> /dev/null; then
    read -p "Do you wish to reboot for dmenu to work (y/n) " yn

@@ -2,6 +2,7 @@
 
 # get config
 . ~/.config/dmenu-scripts/config.sh
+alias yabai="/opt/homebrew/bin/yabai"
 
 # function for choosing a spacific wallpaper
 choose () {

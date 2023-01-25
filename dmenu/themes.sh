@@ -7,7 +7,6 @@
 choice=$(printf \
          "dt-xmonad\\
 pacman\\
-aline\\
 stock\\
 "\
 | sed 's/\\//' | ${DMENU} "Select theme:") # pipe options into dmenu
@@ -16,40 +15,67 @@ stock\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
-    # if choice is stock, do the following ONLY, then exit
     if [ $choice == "stock" ]; then
         # stop services
         brew services stop sketchybar
-        brew services stop yabai
 
-        # enable dock and menubar
-        osascript -e 'tell application "System Events"
-        tell dock preferences to set autohide menu bar to not autohide menu bar
-        end tell'
+        current=$(cat ~/Dotfiles/dmenu/themes/current)
+        if [ $choice == "stock" ] && [ $current == "stock" ]; then
+            osascript -e 'display dialog "Switching from the stock theme to the stock theme again is going to cause issues with menubar and dock hiding. Please switch to another theme, then to the stock theme."'
+            exit
+        fi
 
-        # restart xquartz
-        killall Xquartz
-        open -a Xquartz
+        if [ $SHOW_DOCK_ON_STOCK == "true" ]; then
+            osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to false"
+        fi
 
-        echo $choice > "${FOLDER}/themes/current"
+        if [ $SHOW_MENUBAR_ON_STOCK == "true" ]; then
+            osascript -e 'tell application "System Events"
+            tell dock preferences to set autohide menu bar to not autohide menu bar
+            end tell'
+        fi
 
-        # set wallpaper
-        wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
-        timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
-
-        exit
+        if [ $STOCK_THEME_APPEARENCE == "dark" ]; then
+            osascript -e 'tell application "System Events"
+                tell appearance preferences
+                    set dark mode to true
+                end tell
+            end tell'
+       else
+            osascript -e 'tell application "System Events"
+                tell appearance preferences
+                    set dark mode to false
+                end tell
+            end tell'
+       fi
     fi
 
     # Restart Xquartz
     killall Xquartz
     open -a Xquartz
 
-    current=$(cat ~/Dotfiles/dmenu/themes/current)
-    # make sure dock and menubar are hidden
+    # if the last theme was stock, do the following:
     if [ $current == "stock" ]; then
-         osascript -e 'tell application "System Events"
+        # hide the dock and menubar
+        osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+        osascript -e 'tell application "System Events"
              tell dock preferences to set autohide menu bar to not autohide menu bar
              end tell'
+        # set dark/light mode
+        if [ $CUSTOM_THEME_APPEARENCE == "dark" ]; then
+            osascript -e 'tell application "System Events"
+                tell appearance preferences
+                    set dark mode to true
+                end tell
+            end tell'
+        else
+            osascript -e 'tell application "System Events"
+                tell appearance preferences
+                    set dark mode to false
+                end tell
+            end tell'
+       fi
+
     fi
 
     # make sure yabai and sketchybar are active
@@ -73,6 +99,7 @@ else # if choice is not empty, do the following:
     cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
     cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
 
+
     # apply new yabai config (without settings layout)
     yabai_no_layout=$(sed -n '/bsp/!p' ~/.config/yabai/yabairc) # store yabai config but without layout in a varible
     sh -c "$yabai_no_layout" # run everything in the variable
@@ -82,7 +109,7 @@ else # if choice is not empty, do the following:
     ~/.config/sketchybar/sketchybarrc
 
     # write the theme's number to a text file for other scripts to use
-    echo $choice > "${FOLDER}/themes/current"
+    echo $choice > "$HOME/Dotfiles/dmenu/themes/current"
 
     # set wallpaper
     wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
