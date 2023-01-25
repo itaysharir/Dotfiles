@@ -49,42 +49,31 @@ undo () {
 # a function to confirm setting the wallpaper
 confirm () {
     choice=$(printf "Yes\nNo\nNo, Give me another random wallpaper" | ${DMENU} "Do you like your new wallpaper?")
-    if [[ $choice == "Yes" ]]; then
-        exit
-    fi
-
-    if [[ $choice == "No" ]]; then
-        undo
-    fi
-
-    if [[ $choice == "No, Give me another random wallpaper" ]]; then
-        random
-        confirm
-    fi
+    case $choice in
+        "Yes") exit
+               ;;
+        "No") undo
+              ;;
+        "No, Give me another random wallpaper") random
+                                                confirm
+    esac
 }
 
 # list all options
 main () {
     choice=$(printf "Choose\nRandom\nApply\nUndo" | ${DMENU} "What would you like to do?")
 
-    if [[ $choice == "Choose" ]]; then
-        choose
-        confirm
-    fi
-
-    if [[ $choice == "Random" ]]; then
-        random
-        confirm
-    fi
-
-    if [[ $choice == "Apply" ]]; then
-        apply
-    fi
-
-    if [[ $choice == "Undo" ]]; then
-        undo
-        confirm
-    fi
+    case $choice in
+        "Choose") choose
+                  confirm
+                  ;;
+        "Random") random
+                  confirm
+                  ;;
+        "Apply") apply
+                 ;;
+        "Undo") undo
+    esac
 }
 
 main
