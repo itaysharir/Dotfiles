@@ -55,7 +55,7 @@ https://user-images.githubusercontent.com/87126382/212973076-3a796a19-ae06-4aa9-
 ## 📦 Setup
 To install my Dotfiles, i made an easy install script. To use it, run the following command. <br>
 ```/bin/sh -c "$(curl https://raw.githubusercontent.com/itaysharir/Dotfiles/main/install.sh)"```
-<p style="font-weight: Bold; color: red;">Running the script is recommended over installing manually, manual installing can cause issues with dmenu.</p>
+<p style="font-weight: Bold; color: red;">**Running the script is recommended over installing manually, manual installing can cause issues with dmenu.**</p>
 
 <details id="manual">
 <summary><b>For manual setup</b></summary>
