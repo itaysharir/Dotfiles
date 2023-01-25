@@ -10,10 +10,8 @@ Reigon\\
 "\
 | sed 's/\\//' | ${DMENU} "Search:") # pipe configs into dmenu
 
-if [ $choice == "Fullscreen" ]; then
-    screencapture ${SCREENSHOTPATH}${SCREENSHOTNAME}.${SCREENSHOTFORMAT}
-fi
-
-if [ $choice == "Reigon" ]; then
-    screencapture -i ${SCREENSHOTPATH}${SCREENSHOTNAME}.${SCREENSHOTFORMAT}
-fi
+case $choice in
+    "Fullscreen") screencapture ${SCREENSHOTPATH}${SCREENSHOTNAME}.${SCREENSHOTFORMAT}
+                  ;;
+    "Reigon") screencapture -i ${SCREENSHOTPATH}${SCREENSHOTNAME}.${SCREENSHOTFORMAT}
+esac
