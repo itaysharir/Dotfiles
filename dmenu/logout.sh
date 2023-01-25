@@ -4,9 +4,7 @@
 . ~/.config/dmenu-scripts/config.sh
 
 # function to list all options
-main () {
-    choice=$(printf "Lock Screen\nLogout\nReboot\nShutdown" | ${DMENU} "Shutdown menu:")
-}
+choice=$(printf "Lock Screen\nLogout\nReboot\nShutdown" | ${DMENU} "Shutdown menu:")
 
 if [[ $choice == "Lock Screen" ]]; then
     osascript -e 'tell application "Finder" to sleep'
@@ -23,5 +21,3 @@ fi
 if [[ $choice == "Shutdown" ]]; then
     osascript -e 'tell app "System Events" to shut down'
 fi
-
-main

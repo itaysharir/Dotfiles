@@ -117,7 +117,7 @@ else # if choice is not empty, do the following:
     ~/.config/sketchybar/sketchybarrc
 
     # write the theme's number to a text file for other scripts to use
-    echo $choice > "$HOME/Dotfiles/dmenu/themes/current"
+    echo $choice > "${FOLDER}/themes/current"
 
     # set wallpaper
     wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
