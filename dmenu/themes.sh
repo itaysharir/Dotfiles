@@ -7,6 +7,7 @@
 choice=$(printf \
          "dt-xmonad\\
 pacman\\
+aline\\
 stock\\
 "\
 | sed 's/\\//' | ${DMENU} "Select theme:") # pipe options into dmenu
@@ -15,11 +16,12 @@ stock\\
 if [ -z $choice ]; then
     exit
 else # if choice is not empty, do the following:
+    current=$(cat ~/Dotfiles/dmenu/themes/current)
+
     if [ $choice == "stock" ]; then
         # stop services
         brew services stop sketchybar
 
-        current=$(cat ~/Dotfiles/dmenu/themes/current)
         if [ $choice == "stock" ] && [ $current == "stock" ]; then
             osascript -e 'display dialog "Switching from the stock theme to the stock theme again is going to cause issues with menubar and dock hiding. Please switch to another theme, then to the stock theme."'
             exit
@@ -35,13 +37,13 @@ else # if choice is not empty, do the following:
             end tell'
         fi
 
-        if [ $STOCK_THEME_APPEARENCE == "dark" ]; then
+        if [ $STOCK_APPEARENCE == "dark" ]; then
             osascript -e 'tell application "System Events"
                 tell appearance preferences
                     set dark mode to true
                 end tell
             end tell'
-       else
+        else
             osascript -e 'tell application "System Events"
                 tell appearance preferences
                     set dark mode to false
@@ -57,10 +59,16 @@ else # if choice is not empty, do the following:
     # if the last theme was stock, do the following:
     if [ $current == "stock" ]; then
         # hide the dock and menubar
-        osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
-        osascript -e 'tell application "System Events"
-             tell dock preferences to set autohide menu bar to not autohide menu bar
-             end tell'
+        if [ $SHOW_DOCK_ON_STOCK == "true" ]; then
+            osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+        fi
+
+        if [ $SHOW_MENUBAR_ON_STOCK == "true" ]; then
+            osascript -e 'tell application "System Events"
+                tell dock preferences to set autohide menu bar to not autohide menu bar
+                end tell'
+        fi
+
         # set dark/light mode
         if [ $CUSTOM_THEME_APPEARENCE == "dark" ]; then
             osascript -e 'tell application "System Events"
