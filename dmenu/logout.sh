@@ -6,18 +6,12 @@
 # function to list all options
 choice=$(printf "Lock Screen\nLogout\nReboot\nShutdown" | ${DMENU} "Shutdown menu:")
 
-if [[ $choice == "Lock Screen" ]]; then
-    osascript -e 'tell application "Finder" to sleep'
-fi
-
-if [[ $choice == "Logout" ]]; then
-    skhd -k "cmd + shift - q"
-fi
-
-if [[ $choice == "Reboot" ]]; then
-    osascript -e 'tell app "System Events" to restart'
-fi
-
-if [[ $choice == "Shutdown" ]]; then
-    osascript -e 'tell app "System Events" to shut down'
-fi
+case $choice in
+    "Lock Screen") osascript -e 'tell application "Finder" to sleep'
+                   ;;
+    "Logout") skhd -k "cmd + shift - q"
+              ;;
+    "Reboot") osascript -e 'tell app "System Events" to restart'
+              ;;
+    "Shutdown") osascript -e 'tell app "System Events" to shut down'
+esac
