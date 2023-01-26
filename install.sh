@@ -182,10 +182,9 @@ fi
 step "make sure dark mode is activated"
 osascript -e 'tell application "System Events"
     tell appearance preferences
-        set dark mode to not dark mode
+        set dark mode to true
     end tell
-end tell
-'
+end tell'
 
 step "Starting services"
 brew services restart sketchybar
