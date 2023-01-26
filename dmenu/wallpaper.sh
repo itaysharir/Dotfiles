@@ -28,14 +28,16 @@ random () {
 
 # funcion for applying the current wallpaper to your current rice
 apply () {
-    export currentwall=$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')
+    currentwall=$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')
 
-    case $(cat ~/Dotfiles/dmenu/themes/current) in
+    case $(cat "${FOLDER}/themes/current") in
         dt-xmonad) echo $currentwall > ${FOLDER}/themes/wallpapers/dt-xmonad
                    ;;
         pacman) echo $currentwall > ${FOLDER}/themes/wallpapers/pacman
                 ;;
         aline) echo $currentwall > ${FOLDER}/themes/wallpapers/aline
+               ;;
+        stock) echo $currentwall > ${FOLDER}/themes/wallpapers/stock
     esac
 }
 

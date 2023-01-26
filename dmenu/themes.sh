@@ -18,14 +18,14 @@ if [ -z $choice ]; then
 else # if choice is not empty, do the following:
     current=$(cat ~/Dotfiles/dmenu/themes/current)
 
+    if [ $choice == "stock" ] && [ $current == "stock" ]; then
+        osascript -e 'display dialog "Switching from the stock theme to the stock theme again is going to cause issues with menubar and dock hiding. Please switch to another theme, then to the stock theme."'
+        exit
+    fi
+
     if [ $choice == "stock" ]; then
         # stop services
         brew services stop sketchybar
-
-        if [ $choice == "stock" ] && [ $current == "stock" ]; then
-            osascript -e 'display dialog "Switching from the stock theme to the stock theme again is going to cause issues with menubar and dock hiding. Please switch to another theme, then to the stock theme."'
-            exit
-        fi
 
         if [ $SHOW_DOCK_ON_STOCK == "true" ]; then
             osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to false"
