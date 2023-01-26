@@ -50,6 +50,34 @@ else # if choice is not empty, do the following:
                 end tell
             end tell'
        fi
+
+        rm -r ~/.config/sketchybar  # sketchybar
+        rm -r ~/.config/nvim/       # nvim
+        rm -r ~/.config/alacritty/  # alacritty
+        rm -r ~/.config/yabai/      # yabai
+        rm -r ~/.config/skhd/       # skhd
+
+        # move desired configs to ~/.config
+        cp -r ${FOLDER}/themes/yabai/yabai-$choice ~/.config/yabai                   # yabai
+        cp -r ${FOLDER}/themes/skhd/skhd-$choice ~/.config/skhd                      # skhd
+        cp -r ${FOLDER}/themes/alacritty/alacritty-$choice ~/.config/alacritty       # alacritty
+        cp -r ${FOLDER}/themes/nvim/nvim-$choice ~/.config/nvim                      # nvim
+
+        # apply new yabai config (without settings layout)
+        yabai_no_layout=$(sed -n '/bsp/!p' ~/.config/yabai/yabairc) # store yabai config but without layout in a varible
+        sh -c "$yabai_no_layout" # run everything in the variable
+
+        # write the theme's number to a text file for other scripts to use
+        echo $choice > "${FOLDER}/themes/current"
+
+        # set wallpaper
+        wall=$(cat ${FOLDER}/themes/wallpapers/${choice}) # see what is the applied wallpaper for the selected theme and save it in a variable
+        timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
+
+        # add back proper borders yabai
+        /opt/homebrew/bin/yabai -m config window_shadow off
+
+        exit
     fi
 
     # Restart Xquartz
@@ -99,6 +127,7 @@ else # if choice is not empty, do the following:
     rm -r ~/.config/nvim/       # nvim
     rm -r ~/.config/alacritty/  # alacritty
     rm -r ~/.config/yabai/      # yabai
+    rm -r ~/.config/skhd/       # skhd
 
     # move desired configs to ~/.config
     cp -r ${FOLDER}/themes/sketchybar/sketchybar-$choice ~/.config/sketchybar    # sketchybar
