@@ -1,4 +1,4 @@
-# Dotfiles | macOS themes collection
+# Dotfiles | A collection of macOS themes
 
 ## ☘️ Introduction
 I'm Itay, a 12 y/o kid from israel, and i love making my computer look and behave just like i want it to. These are my Dotfiles, with 3 (Technically 4) themes. Enjoy! <br>
