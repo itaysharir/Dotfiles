@@ -24,7 +24,6 @@ else # if choice is not empty, do the following:
     fi
 
     if [ $choice == "stock" ]; then
-        # stop services
         brew services stop sketchybar
 
         if [ $SHOW_DOCK_ON_STOCK == "true" ]; then
@@ -77,12 +76,12 @@ else # if choice is not empty, do the following:
         # add back proper borders yabai
         /opt/homebrew/bin/yabai -m config window_shadow off
 
+        # Restart Xquartz
+        killall Xquartz
+        open -a Xquartz
+
         exit
     fi
-
-    # Restart Xquartz
-    killall Xquartz
-    open -a Xquartz
 
     # if the last theme was stock, do the following:
     if [ $current == "stock" ]; then
@@ -153,4 +152,8 @@ else # if choice is not empty, do the following:
 
     # add back proper borders yabai
     /opt/homebrew/bin/yabai -m config window_shadow off
+
+    # Restart Xquartz
+    killall Xquartz
+    open -a Xquartz
 fi

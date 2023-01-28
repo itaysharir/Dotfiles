@@ -18,7 +18,7 @@ export opacity_toggle="off"             # Detriments wether opacity based focus 
 export layout="float"                   # Layout of windows                                               (usage: bsp/float/stack)
 export gap_width="17"                   # width of window gaps                                            (usage: 17/8/any number)
 export animation_duration="0"           # Window animation duration                                       (usage: 0.0/0.3/0.5)
-export autoraise_toggle="on"            # turn autoraise on or off                                        (usage: on/off)
+export autoraise_toggle="off"           # turn autoraise on or off                                        (usage: on/off)
 
 ### Load scriptting adittion ##
 sudo yabai --load-sa
