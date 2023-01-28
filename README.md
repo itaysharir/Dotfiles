@@ -10,6 +10,7 @@ https://user-images.githubusercontent.com/87126382/212973076-3a796a19-ae06-4aa9-
 
 |OS|macOS (Ventura, 13.1)|
 |:---:|:---:|
+|Machine|M1 MacBook Pro, Late 2020|
 |WM|[yabai](https://github.com/koekeishiya/yabai)|
 |Bar|[sketchybar](https://github.com/FelixKratz/SketchyBar)|
 |Menu|[Dmenu](https://tools.suckless.org/dmenu/)|
