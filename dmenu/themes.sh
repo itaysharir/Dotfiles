@@ -70,7 +70,7 @@ else # if choice is not empty, do the following:
         echo $choice > "${FOLDER}/themes/current"
 
         # set wallpaper
-        wall=$(cat ${FOLDER}/themes/wallpapers/${choice}) # see what is the applied wallpaper for the selected theme and save it in a variable
+        wall=$(cat $HOME/Dotfiles/dmenu/themes/wallpapers/$choice) # see what is the applied wallpaper for the selected theme and save it in a variable
         timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
 
         # add back proper borders yabai
@@ -147,7 +147,7 @@ else # if choice is not empty, do the following:
     echo $choice > "${FOLDER}/themes/current"
 
     # set wallpaper
-    wall=$(cat "${FOLDER}/themes/wallpapers/$choice") # see what is the applied wallpaper for the selected theme and save it in a variable
+    wall=$(cat $HOME/Dotfiles/dmenu/themes/wallpapers/$choice) # see what is the applied wallpaper for the selected theme and save it in a variable
     timeout 1s wal -i $wall # set the wallpaper saved in the "wall" variable
 
     # add back proper borders yabai

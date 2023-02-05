@@ -75,7 +75,7 @@ install jq
 step "install wget"
 install wget
 
-step "Installing dependencies/apps/oh-my-zsh"
+step "Installing dependencies/shell/oh-my-zsh"
 cd ~/
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh --unattended
@@ -84,8 +84,14 @@ rm -rf install.sh
 step "Installing dependencies/apps/cava if not already installed"
 install cava
 
-step "Installing dependencies/apps/starship if not already installed"
+step "Installing dependencies/shell/starship if not already installed"
 install starship
+
+step "Installing dependencies/shell/zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
+step "Installing dependencies/shell/zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 
 step "Installing apps/firefox"
 brew install firefox
@@ -124,7 +130,6 @@ for i in "${!configs_home[@]}"; do
     echo "Moved ${configs_home[i]}"
 done
 cp config/zsh/.zshrc ~/.zshrc
-cp -r config/zsh/.zsh ~/.zsh
 echo "Moved zsh"
 cp config/starship/starship.toml ~/.config/starship.toml
 echo "Moved starship"
